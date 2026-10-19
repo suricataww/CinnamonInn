@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bicg0pw8817vq"]
+
+[ext_resource type="Script" uid="uid://c1qaj0vu4r0cc" path="res://bakery.gd" id="1_wsl86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbuiu"]
+size = Vector2(590, 206.5)
+
+[node name="Bakery" type="Node2D"]
+script = ExtResource("1_wsl86")
+
+[node name="BKG" type="Sprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(855, 545.25)
+shape = SubResource("RectangleShape2D_rbuiu")

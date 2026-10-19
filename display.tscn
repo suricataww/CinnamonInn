@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs57chc66tknb"]
+
+[ext_resource type="Script" uid="uid://bm408y0chifvt" path="res://display.gd" id="1_mytll"]
+[ext_resource type="Texture2D" uid="uid://bwbwuq3ugtf2s" path="res://icon.svg" id="2_tbhi7"]
+[ext_resource type="Script" uid="uid://bxl7nwsbx3y55" path="res://animated_sprite_2d.gd" id="3_tbhi7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_txl3f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tbhi7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlkrk"]
+size = Vector2(126, 125)
+
+[node name="Display" type="Node2D"]
+script = ExtResource("1_mytll")
+
+[node name="BKG" type="Sprite2D" parent="."]
+
+[node name="Pastry1" type="AnimatedSprite2D" parent="."]
+position = Vector2(245, 435)
+scale = Vector2(1.984375, 1.34375)
+sprite_frames = SubResource("SpriteFrames_txl3f")
+script = ExtResource("3_tbhi7")
+
+[node name="Area2D" type="Area2D" parent="Pastry1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pastry1/Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rlkrk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pastry1"]
+offset_left = 28.72441
+offset_top = -43.162792
+offset_right = 68.72441
+offset_bottom = -3.1627922
+
+[node name="price" type="Label" parent="Pastry1/VBoxContainer"]
+layout_mode = 2
+
+[node name="inventory" type="Label" parent="Pastry1/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Pastry1/Area2D" to="Pastry1" method="hoover"]
+[connection signal="mouse_exited" from="Pastry1/Area2D" to="Pastry1" method="hooverout"]

@@ -1,0 +1,2 @@
+# CinnamonInn
+Cooking game

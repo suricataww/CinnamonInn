@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cs57chc66tknb"]
+[gd_scene load_steps=21 format=3 uid="uid://cs57chc66tknb"]
 
 [ext_resource type="Script" uid="uid://bm408y0chifvt" path="res://display.gd" id="1_mytll"]
 [ext_resource type="Texture2D" uid="uid://cmcnt1xw22th8" path="res://init_assets/0c.png" id="2_md80r"]
@@ -67,6 +67,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlkrk"]
 size = Vector2(522.91974, 136.11055)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx2p0"]
+bg_color = Color(0.35531357, 0.35531357, 0.35531345, 0.5882353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2d6qp"]
+bg_color = Color(0.35686275, 0.35686275, 0.35686275, 0.5882353)
+
 [node name="Display" type="Node2D"]
 script = ExtResource("1_mytll")
 
@@ -97,9 +103,13 @@ offset_bottom = -3.1627922
 
 [node name="price" type="Label" parent="cinnamonroll/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_wx2p0")
 
 [node name="inventory" type="Label" parent="cinnamonroll/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_2d6qp")
 
 [connection signal="mouse_entered" from="cinnamonroll/Area2D" to="cinnamonroll" method="hoover"]
 [connection signal="mouse_exited" from="cinnamonroll/Area2D" to="cinnamonroll" method="hooverout"]

@@ -10,31 +10,22 @@ func _ready() -> void:
 	price.text = ""
 	inventory.text = ""
 	print(scale)
-	price.text = "im_just_writting_bullshit_so_that_i_can_see_if_terra_works_this_time)"
-	if global.inv_treat1 == 12:
-		frame = 12
-	
-#
-#func _physics_process(delta: float) -> void:
-	#if global.inv_treat1 == 0:
-		#modulate.a = 0
-	#else:
-		#modulate.a = 1
+	frame = global.inv_treat1
 
 func hoover() -> void:
 	price.text = "$10"
 	inventory.text = str(global.inv_treat1)
-	#scale = Vector2(2.06,1.41)
+	scale = Vector2(0.975,0.89)
 		
 func hooverout() -> void:
 	price.text = ""
 	inventory.text = ""
-	#scale = Vector2(1.984375, 1.34375)
+	scale = Vector2(0.944504, 0.867921)
 	
 func pressed (viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		global.inv_treat1 -= 1
 		frame = global.inv_treat1
 		global.display_selection = 1 #specific pentru cinnamon roll
-		print(global.display_selection)
+		global.price = 5 #specific pentru cinnamon roll
 		get_tree().change_scene_to_file("res://bakery.tscn")

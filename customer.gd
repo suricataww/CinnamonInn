@@ -4,6 +4,8 @@ extends AnimatedSprite2D
 func _ready() -> void:
 	add_to_group("customer")
 	area2d.area_entered.connect(entered)
+	await get_tree().create_timer(0.4).timeout
+	print("can you give me a cinnamon roll please?")
 
 func _process(delta: float) -> void:
 	pass

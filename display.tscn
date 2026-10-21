@@ -1,51 +1,105 @@
-[gd_scene load_steps=6 format=3 uid="uid://cs57chc66tknb"]
+[gd_scene load_steps=19 format=3 uid="uid://cs57chc66tknb"]
 
 [ext_resource type="Script" uid="uid://bm408y0chifvt" path="res://display.gd" id="1_mytll"]
-[ext_resource type="Texture2D" uid="uid://bwbwuq3ugtf2s" path="res://icon.svg" id="2_tbhi7"]
+[ext_resource type="Texture2D" uid="uid://cmcnt1xw22th8" path="res://init_assets/0c.png" id="2_md80r"]
+[ext_resource type="Texture2D" uid="uid://cgjcjyuw4jjeh" path="res://init_assets/init_bkg_display.png" id="2_wx2p0"]
 [ext_resource type="Script" uid="uid://bxl7nwsbx3y55" path="res://animated_sprite_2d.gd" id="3_tbhi7"]
+[ext_resource type="Texture2D" uid="uid://cdsrqghviuxnp" path="res://init_assets/1c.png" id="3_uiu4r"]
+[ext_resource type="Texture2D" uid="uid://dvjsxiagaj1oq" path="res://init_assets/2c.png" id="4_wx2p0"]
+[ext_resource type="Texture2D" uid="uid://r4qh3nv5x55p" path="res://init_assets/3c.png" id="5_2d6qp"]
+[ext_resource type="Texture2D" uid="uid://dley7340ashod" path="res://init_assets/4c.png" id="6_agley"]
+[ext_resource type="Texture2D" uid="uid://btcpwwtp86ctb" path="res://init_assets/5c.png" id="7_h0bd0"]
+[ext_resource type="Texture2D" uid="uid://bcordf2yg72kt" path="res://init_assets/6c.png" id="8_gdo8m"]
+[ext_resource type="Texture2D" uid="uid://ci1r5mg6mpane" path="res://init_assets/7c.png" id="9_f258m"]
+[ext_resource type="Texture2D" uid="uid://ute20phc7mgh" path="res://init_assets/8c.png" id="10_8b0sg"]
+[ext_resource type="Texture2D" uid="uid://bmqsl0u77j46u" path="res://init_assets/10c.png" id="11_fiupt"]
+[ext_resource type="Texture2D" uid="uid://c7sgxnq70fkp" path="res://init_assets/9c.png" id="11_uiu4r"]
+[ext_resource type="Texture2D" uid="uid://gv3wsivqgptv" path="res://init_assets/11c.png" id="12_62obs"]
+[ext_resource type="Texture2D" uid="uid://bbqqw7a6vu7j5" path="res://init_assets/12c.png" id="13_bxqbu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_txl3f"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_tbhi7")
+"texture": ExtResource("2_md80r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uiu4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wx2p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2d6qp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_agley")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h0bd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gdo8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f258m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8b0sg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_uiu4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fiupt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_62obs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bxqbu")
 }],
 "loop": true,
-"name": &"default",
+"name": &"new_animation",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlkrk"]
-size = Vector2(126, 125)
+size = Vector2(522.91974, 136.11055)
 
 [node name="Display" type="Node2D"]
 script = ExtResource("1_mytll")
 
 [node name="BKG" type="Sprite2D" parent="."]
+position = Vector2(576, 323)
+scale = Vector2(1.1454183, 1.15)
+texture = ExtResource("2_wx2p0")
 
-[node name="Pastry1" type="AnimatedSprite2D" parent="."]
-position = Vector2(245, 435)
-scale = Vector2(1.984375, 1.34375)
+[node name="cinnamonroll" type="AnimatedSprite2D" parent="."]
+position = Vector2(302, 501.00003)
+scale = Vector2(0.94450426, 0.8679211)
 sprite_frames = SubResource("SpriteFrames_txl3f")
+animation = &"new_animation"
 script = ExtResource("3_tbhi7")
 
-[node name="Area2D" type="Area2D" parent="Pastry1"]
+[node name="Area2D" type="Area2D" parent="cinnamonroll"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pastry1/Area2D"]
-position = Vector2(0, 0.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cinnamonroll/Area2D"]
+position = Vector2(-47.025116, 36.110962)
+scale = Vector2(1, 0.9999997)
 shape = SubResource("RectangleShape2D_rlkrk")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Pastry1"]
+[node name="VBoxContainer" type="VBoxContainer" parent="cinnamonroll"]
 offset_left = 28.72441
 offset_top = -43.162792
 offset_right = 68.72441
 offset_bottom = -3.1627922
 
-[node name="price" type="Label" parent="Pastry1/VBoxContainer"]
+[node name="price" type="Label" parent="cinnamonroll/VBoxContainer"]
 layout_mode = 2
 
-[node name="inventory" type="Label" parent="Pastry1/VBoxContainer"]
+[node name="inventory" type="Label" parent="cinnamonroll/VBoxContainer"]
 layout_mode = 2
 
-[connection signal="mouse_entered" from="Pastry1/Area2D" to="Pastry1" method="hoover"]
-[connection signal="mouse_exited" from="Pastry1/Area2D" to="Pastry1" method="hooverout"]
+[connection signal="mouse_entered" from="cinnamonroll/Area2D" to="cinnamonroll" method="hoover"]
+[connection signal="mouse_exited" from="cinnamonroll/Area2D" to="cinnamonroll" method="hooverout"]

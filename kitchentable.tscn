@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://borq5pqbmmgdp"]
+
+[ext_resource type="Script" uid="uid://yuwsgepkshml" path="res://wsugar.gd" id="1_3nmhd"]
+[ext_resource type="Texture2D" uid="uid://bwbwuq3ugtf2s" path="res://icon.svg" id="1_qf70m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_owg2j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qf70m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qf70m"]
+radius = 51.0
+height = 148.0
+
+[node name="kitchentable" type="Node2D"]
+metadata/_edit_vertical_guides_ = [232.0, 460.0, 690.0, 920.0]
+
+[node name="BKG" type="Sprite2D" parent="."]
+
+[node name="Wsugar" type="AnimatedSprite2D" parent="."]
+position = Vector2(158, 110)
+sprite_frames = SubResource("SpriteFrames_owg2j")
+script = ExtResource("1_3nmhd")
+
+[node name="Area2D" type="Area2D" parent="Wsugar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wsugar/Area2D"]
+shape = SubResource("CapsuleShape2D_qf70m")

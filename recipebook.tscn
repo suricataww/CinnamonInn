@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=3 uid="uid://bp7euwlf76w07"]
+
+[ext_resource type="Texture2D" uid="uid://7108vgrarmlr" path="res://init_assets/image-removebg-preview (43).png" id="1_lrkfv"]
+[ext_resource type="Texture2D" uid="uid://bbmh0desvjxw7" path="res://init_assets/image-removebg-preview (42).png" id="2_7oc8o"]
+[ext_resource type="Texture2D" uid="uid://dqa6auir3aaic" path="res://init_assets/image-removebg-preview (40).png" id="3_7u03h"]
+[ext_resource type="Texture2D" uid="uid://beimvdwpp0boj" path="res://init_assets/image-removebg-preview (41).png" id="4_kvmwr"]
+[ext_resource type="Script" uid="uid://cojy1k63fn1nb" path="res://recipebook.gd" id="5_7oc8o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j4061"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lrkfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7oc8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7u03h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kvmwr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7oc8o"]
+size = Vector2(57, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7u03h"]
+size = Vector2(55, 137.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvmwr"]
+size = Vector2(84, 80)
+
+[node name="recipebook" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_j4061")
+script = ExtResource("5_7oc8o")
+
+[node name="stg" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stg"]
+position = Vector2(-195, 77)
+shape = SubResource("RectangleShape2D_7oc8o")
+
+[node name="dr" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dr"]
+position = Vector2(194, 77.75)
+shape = SubResource("RectangleShape2D_7u03h")
+
+[node name="select" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="select"]
+position = Vector2(-157, -56)
+shape = SubResource("RectangleShape2D_kvmwr")
+debug_color = Color(0.72261506, 0.40248957, 0.67805594, 0.41960785)

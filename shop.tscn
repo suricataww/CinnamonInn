@@ -1,0 +1,325 @@
+[gd_scene load_steps=8 format=3 uid="uid://bldw7xyvi6883"]
+
+[ext_resource type="Texture2D" uid="uid://bn74vdwj5iel2" path="res://init_assets/Screenshot 2026-10-22 150934.png" id="1_e7rdd"]
+[ext_resource type="Script" uid="uid://dljjdq1b8dn4y" path="res://scroll_container.gd" id="1_gmb2m"]
+[ext_resource type="Texture2D" uid="uid://d2xkjwduvyst7" path="res://init_assets/flour.png" id="2_blqjs"]
+[ext_resource type="Texture2D" uid="uid://drd8lonn2r732" path="res://init_assets/wsugar.png" id="4_8kdgp"]
+[ext_resource type="Texture2D" uid="uid://b7io4o84jdirl" path="res://init_assets/bsugar.png" id="5_myf4l"]
+[ext_resource type="Texture2D" uid="uid://drdojoxoet4it" path="res://init_assets/butter.png" id="6_p5a0g"]
+[ext_resource type="Texture2D" uid="uid://dvnsin0yiyvio" path="res://init_assets/cinnamon.png" id="7_8kdgp"]
+
+[node name="shop" type="Node2D"]
+metadata/_edit_vertical_guides_ = [380.0, 626.0, 882.0, 1050.0]
+metadata/_edit_horizontal_guides_ = [190.0]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 49.0
+offset_top = 53.0
+offset_right = 348.0
+offset_bottom = 96.0
+theme_override_constants/separation = 15
+
+[node name="Bingredients" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "ingredients
+"
+
+[node name="Bdecoration" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "decoration"
+
+[node name="BKG" type="Sprite2D" parent="."]
+position = Vector2(0, 41)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 49.0
+offset_top = 99.0
+offset_right = 1101.0
+offset_bottom = 669.0
+script = ExtResource("1_gmb2m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="flour" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/flour"]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 60.0
+offset_right = 505.0
+offset_bottom = 129.0
+theme_override_font_sizes/font_size = 45
+text = "FLOUR"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/flour"]
+position = Vector2(119.00001, 90.00001)
+scale = Vector2(0.40571126, 0.40571126)
+texture = ExtResource("2_blqjs")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/flour"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/flour"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $2"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/flour"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 1000g"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/flour"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="wsugar" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/wsugar"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 31.0
+offset_right = 507.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 45
+text = "WHITE
+SUGAR"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/wsugar"]
+position = Vector2(128, 96)
+scale = Vector2(0.24131718, 0.24131718)
+texture = ExtResource("4_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/wsugar"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/wsugar"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $2"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/wsugar"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 500g"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/wsugar"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="bsugar" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/bsugar"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 31.0
+offset_right = 507.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 45
+text = "BROWN
+SUGAR"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/bsugar"]
+position = Vector2(129.99998, 90.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("5_myf4l")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/bsugar"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/bsugar"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $4.5"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/bsugar"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 500g"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/bsugar"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="butter" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/butter"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 51.0
+offset_right = 513.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 45
+text = "BUTTER"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/butter"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("6_p5a0g")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/butter"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/butter"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $12"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/butter"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 200g"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/butter"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="cinnamonp" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "CINNAMON
+POWDER"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $5"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 30g"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/flour/Button" to="ScrollContainer" method="_on_flour_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/wsugar/Button" to="ScrollContainer" method="on_wsugar_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/bsugar/Button" to="ScrollContainer" method="on_wsugar_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/butter/Button" to="ScrollContainer" method="on_wsugar_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/cinnamonp/Button" to="ScrollContainer" method="on_wsugar_pressed"]

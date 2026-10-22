@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://buw0l8ebxjk5n"]
+
+[ext_resource type="Script" uid="uid://nm28l5jjr5fh" path="res://menu_selection.gd" id="1_kbut2"]
+
+[node name="menu_selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kbut2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.0
+offset_top = -55.0
+offset_right = 188.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bakery" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Bakery"
+
+[node name="kitchen" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Kitchen"
+
+[node name="shop" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Shop"
+
+[node name="BKG" type="Sprite2D" parent="."]
+
+[connection signal="pressed" from="VBoxContainer/bakery" to="." method="_on_bakery_pressed"]
+[connection signal="pressed" from="VBoxContainer/kitchen" to="." method="_on_kitchen_pressed"]
+[connection signal="pressed" from="VBoxContainer/shop" to="." method="_on_shop_pressed"]

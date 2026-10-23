@@ -1,0 +1,128 @@
+[gd_scene load_steps=11 format=3 uid="uid://bhbdkb1w587pe"]
+
+[ext_resource type="Script" uid="uid://cd1i21scvbahw" path="res://slider.gd" id="1_kiqxe"]
+[ext_resource type="Texture2D" uid="uid://d2xkjwduvyst7" path="res://init_assets/flour.png" id="2_80vbm"]
+[ext_resource type="Texture2D" uid="uid://drd8lonn2r732" path="res://init_assets/wsugar.png" id="3_5aurm"]
+[ext_resource type="Texture2D" uid="uid://b7io4o84jdirl" path="res://init_assets/bsugar.png" id="4_ojvsg"]
+[ext_resource type="Texture2D" uid="uid://drdojoxoet4it" path="res://init_assets/butter.png" id="5_1r2gk"]
+[ext_resource type="Texture2D" uid="uid://dvnsin0yiyvio" path="res://init_assets/cinnamon.png" id="6_u436t"]
+[ext_resource type="Texture2D" uid="uid://c5wy76hxykxhc" path="res://init_assets/Screenshot 2026-10-22 145857.png" id="7_du8kh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wwkj"]
+bg_color = Color(0.5181408, 0.61799544, 0.67149574, 1)
+border_width_left = 10
+border_width_top = 3
+border_width_right = 10
+border_width_bottom = 3
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+expand_margin_left = 50.0
+expand_margin_top = 20.0
+expand_margin_right = 50.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yiagy"]
+bg_color = Color(0.27253538, 0.6563408, 0.76884913, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ps4b5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_80vbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5aurm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ojvsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1r2gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u436t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="slider" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kiqxe")
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 564.0
+offset_top = 228.0
+offset_right = 1011.0
+offset_bottom = 395.0
+theme_override_constants/center_grabber = 1
+theme_override_styles/slider = SubResource("StyleBoxFlat_7wwkj")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yiagy")
+value = 50.0
+
+[node name="quantity" type="Label" parent="HSlider"]
+layout_mode = 0
+offset_left = -47.0
+offset_top = 22.0
+offset_right = 30.0
+offset_bottom = 45.0
+text = "Quantity: "
+
+[node name="zero" type="Label" parent="HSlider"]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 110.0
+offset_right = -35.0
+offset_bottom = 133.0
+text = "0"
+
+[node name="maximumqty" type="Label" parent="HSlider"]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 112.0
+offset_right = 511.0
+offset_bottom = 135.0
+text = "100"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(273.00003, 327.00003)
+scale = Vector2(0.9504311, 0.9504311)
+sprite_frames = SubResource("SpriteFrames_ps4b5")
+
+[node name="shadow" type="Sprite2D" parent="AnimatedSprite2D"]
+modulate = Color(0, 0, 0, 0.17254902)
+position = Vector2(17.886581, -15.782348)
+scale = Vector2(0.654189, 1.4274224)
+texture = ExtResource("7_du8kh")
+
+[node name="proceed" type="Button" parent="."]
+layout_mode = 0
+offset_left = 965.0
+offset_top = 458.0
+offset_right = 1056.0
+offset_bottom = 508.0
+theme_override_font_sizes/font_size = 30
+text = "Okay!"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 460.0
+offset_right = 599.0
+offset_bottom = 510.0
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[connection signal="pressed" from="proceed" to="." method="_on_proceed_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://c1qaj0vu4r0cc" path="res://bakery.gd" id="1_wsl86"]
 [ext_resource type="Texture2D" uid="uid://ou0ysaqt3tw" path="res://init_assets/init_bkg_sell.jpg" id="2_ouogn"]
-[ext_resource type="PackedScene" uid="uid://bp7euwlf76w07" path="res://recipebook.tscn" id="3_s7bsd"]
 [ext_resource type="Texture2D" uid="uid://tnhq7vxw85t7" path="res://init_assets/cserve.png" id="4_2vx5a"]
 [ext_resource type="Script" uid="uid://25r78gtw08kh" path="res://tobeserved.gd" id="5_ybdsq"]
 [ext_resource type="Script" uid="uid://c0qeecqetf6ei" path="res://customer.gd" id="6_mou4l"]
 [ext_resource type="Texture2D" uid="uid://bwbwuq3ugtf2s" path="res://icon.svg" id="6_ybdsq"]
 [ext_resource type="PackedScene" uid="uid://c7eubakvjqyo1" path="res://coins.tscn" id="8_mou4l"]
+[ext_resource type="PackedScene" uid="uid://m4hbalypdy4p" path="res://back_button.tscn" id="9_fewt1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbuiu"]
 size = Vector2(655, 159.5)
@@ -54,10 +54,6 @@ shape = SubResource("RectangleShape2D_rbuiu")
 position = Vector2(579, 326)
 texture = ExtResource("2_ouogn")
 
-[node name="recipebook" parent="." instance=ExtResource("3_s7bsd")]
-position = Vector2(121, 89)
-scale = Vector2(0.36533815, 0.36533818)
-
 [node name="tobeserved" type="AnimatedSprite2D" parent="."]
 position = Vector2(340, 539)
 scale = Vector2(0.43327057, 0.43327066)
@@ -87,3 +83,10 @@ offset_left = 1064.0
 offset_top = 7.0
 offset_right = 1151.0
 offset_bottom = 77.0
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" parent="." instance=ExtResource("9_fewt1")]
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 24.0
+offset_bottom = 20.0

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgt6wiwa3jis6"]
+
+[ext_resource type="Script" uid="uid://ctfeo22otdevi" path="res://pantry.gd" id="1_nnwea"]
+[ext_resource type="Texture2D" uid="uid://d2xkjwduvyst7" path="res://init_assets/flour.png" id="1_p3pww"]
+[ext_resource type="PackedScene" uid="uid://bhbdkb1w587pe" path="res://slider.tscn" id="2_bvupd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvupd"]
+size = Vector2(209.25482, 327.5293)
+
+[node name="pantry" type="Node2D"]
+script = ExtResource("1_nnwea")
+metadata/_edit_vertical_guides_ = [354.0]
+
+[node name="flour" type="Sprite2D" parent="."]
+position = Vector2(410.00003, 115.00001)
+scale = Vector2(0.4396553, 0.4396553)
+texture = ExtResource("1_p3pww")
+
+[node name="Area2D" type="Area2D" parent="flour"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flour/Area2D"]
+position = Vector2(15.921509, -11.372559)
+shape = SubResource("RectangleShape2D_bvupd")
+
+[node name="slider" parent="." instance=ExtResource("2_bvupd")]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://borq5pqbmmgdp"]
+[gd_scene load_steps=6 format=3 uid="uid://borq5pqbmmgdp"]
 
 [ext_resource type="Script" uid="uid://yuwsgepkshml" path="res://wsugar.gd" id="1_3nmhd"]
 [ext_resource type="Texture2D" uid="uid://bwbwuq3ugtf2s" path="res://icon.svg" id="1_qf70m"]
+[ext_resource type="PackedScene" uid="uid://m4hbalypdy4p" path="res://back_button.tscn" id="3_owg2j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owg2j"]
 animations = [{
@@ -32,3 +33,9 @@ script = ExtResource("1_3nmhd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wsugar/Area2D"]
 shape = SubResource("CapsuleShape2D_qf70m")
+
+[node name="BackButton" parent="." instance=ExtResource("3_owg2j")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 4.0
+offset_bottom = 4.0

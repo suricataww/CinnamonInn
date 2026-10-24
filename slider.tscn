@@ -69,6 +69,7 @@ offset_bottom = 395.0
 theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_7wwkj")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yiagy")
+step = 5.0
 value = 50.0
 
 [node name="quantity" type="Label" parent="HSlider"]

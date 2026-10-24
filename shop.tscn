@@ -934,6 +934,495 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
+[node name="cocoa" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/cocoa"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "COCOA"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/cocoa"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/cocoa"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/cocoa"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $13"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/cocoa"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 100g"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/cocoa"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="hwhipcream" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "HEAVY
+WHIPPING
+CREAM"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $20"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 500 ml"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="oil" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/oil"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "OIL"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/oil"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/oil"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/oil"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $2"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/oil"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 1000 ml"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/oil"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="water" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/water"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "WATER"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/water"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/water"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/water"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $4.5"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/water"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 1000ml"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/water"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="cowcheese" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/cowcheese"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "COW
+CHEESE"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/cowcheese"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/cowcheese"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/cowcheese"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $5"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/cowcheese"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 500g"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/cowcheese"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="lemon" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/lemon"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "LEMON"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/lemon"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/lemon"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/lemon"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $2"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/lemon"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 200 g"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/lemon"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="sourcream" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/sourcream"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "SOURCREAM"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/sourcream"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/sourcream"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/sourcream"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $12.5"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/sourcream"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 500 g"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/sourcream"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="jam" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/jam"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "JAM"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/jam"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/jam"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/jam"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $12"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/jam"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 200g"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/jam"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="banana" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/banana"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "BANANA"
+
+[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/banana"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/banana"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/banana"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $2"
+
+[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/banana"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 1"
+
+[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/banana"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
 [node name="coins" parent="." instance=ExtResource("8_myf4l")]
 offset_top = 20.0
 offset_bottom = 62.0
@@ -962,3 +1451,12 @@ offset_bottom = 14.0
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/salt/Button" to="ScrollContainer" method="on_salt_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/creamcheese/Button" to="ScrollContainer" method="on_creamcheese_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/vanilla/Button" to="ScrollContainer" method="on_vanilla_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/cocoa/Button" to="ScrollContainer" method="on_vanilla_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/hwhipcream/Button" to="ScrollContainer" method="on_vanilla_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/oil/Button" to="ScrollContainer" method="on_vanilla_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/water/Button" to="ScrollContainer" method="on_vanilla_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/cowcheese/Button" to="ScrollContainer" method="on_vanilla_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/lemon/Button" to="ScrollContainer" method="on_vanilla_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/sourcream/Button" to="ScrollContainer" method="on_vanilla_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/jam/Button" to="ScrollContainer" method="on_vanilla_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/banana/Button" to="ScrollContainer" method="on_vanilla_pressed"]

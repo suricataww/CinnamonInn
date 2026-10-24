@@ -1,5 +1,6 @@
 extends Node
 
+#general
 var dish_selection = 0
 var display_selection = 0
 var price = 0
@@ -17,6 +18,15 @@ var inv_yeast = 0
 var inv_salt = 0
 var inv_creamcheese = 0
 var inv_vanilla = 0
+var inv_cocoa = 0
+var inv_hwhipcream = 0
+var inv_oil = 0
+var inv_water = 0
+var inv_cowcheese = 0
+var inv_lemon = 0
+var inv_sourcream = 0
+var inv_jam = 0
+var inv_banana = 0
 
 #inventory for ingredients while cooking
 var invc_flour = 0
@@ -30,10 +40,18 @@ var invc_yeast = 0
 var invc_salt = 0
 var invc_creamcheese = 0
 var invc_vanilla = 0
+var invc_cocoa = 0
+var invc_hwhipcream = 0
+var invc_oil = 0
+var invc_water = 0
+var invc_cowcheese = 0
+var invc_lemon = 0
+var invc_sourcream = 0
+var invc_jam = 0
+var invc_banana = 0
 
 #inventory for dishes
-var inv_treat1 = 12
-
+var inv_treat1 = 12  #de schimbat in cinnamonroll
 
 #slider selection signal
 var slider_selec = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bldw7xyvi6883"]
+[gd_scene load_steps=18 format=3 uid="uid://bldw7xyvi6883"]
 
 [ext_resource type="Texture2D" uid="uid://bn74vdwj5iel2" path="res://init_assets/Screenshot 2026-10-22 150934.png" id="1_e7rdd"]
 [ext_resource type="Script" uid="uid://dljjdq1b8dn4y" path="res://scroll_container.gd" id="1_gmb2m"]
@@ -11,7 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://dvnsin0yiyvio" path="res://init_assets/cinnamon.png" id="7_8kdgp"]
 [ext_resource type="PackedScene" uid="uid://c7eubakvjqyo1" path="res://coins.tscn" id="8_myf4l"]
 [ext_resource type="Texture2D" uid="uid://bwbwuq3ugtf2s" path="res://icon.svg" id="9_sw5c6"]
+[ext_resource type="Texture2D" uid="uid://d0a6bgnlrn0t" path="res://init_assets/lapteidle.png" id="11_jtxfs"]
 [ext_resource type="PackedScene" uid="uid://m4hbalypdy4p" path="res://back_button.tscn" id="11_sw5c6"]
+[ext_resource type="Texture2D" uid="uid://cgc6wls6xs1df" path="res://init_assets/ou.png" id="12_tuxin"]
+[ext_resource type="Texture2D" uid="uid://bbmh0desvjxw7" path="res://init_assets/image-removebg-preview (42).png" id="13_8lh4o"]
+[ext_resource type="Texture2D" uid="uid://dqa6auir3aaic" path="res://init_assets/image-removebg-preview (40).png" id="14_il0eq"]
+[ext_resource type="Texture2D" uid="uid://beimvdwpp0boj" path="res://init_assets/image-removebg-preview (41).png" id="15_acxsc"]
 
 [node name="shop" type="Node2D"]
 script = ExtResource("1_xqmyw")
@@ -625,7 +630,7 @@ text = "MILK"
 [node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/milk"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
-texture = ExtResource("7_8kdgp")
+texture = ExtResource("11_jtxfs")
 
 [node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/milk"]
 layout_mode = 0
@@ -679,7 +684,7 @@ text = "EGGS"
 [node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/eggs"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
-texture = ExtResource("7_8kdgp")
+texture = ExtResource("12_tuxin")
 
 [node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/eggs"]
 layout_mode = 0
@@ -733,7 +738,7 @@ text = "YEAST"
 [node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/yeast"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
-texture = ExtResource("7_8kdgp")
+texture = ExtResource("13_8lh4o")
 
 [node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/yeast"]
 layout_mode = 0
@@ -787,7 +792,7 @@ text = "SALT"
 [node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/salt"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
-texture = ExtResource("7_8kdgp")
+texture = ExtResource("14_il0eq")
 
 [node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/salt"]
 layout_mode = 0
@@ -826,6 +831,7 @@ offset_bottom = 165.0
 text = "inventory:"
 
 [node name="creamcheese" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
@@ -896,7 +902,7 @@ text = "VANILLA"
 [node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/vanilla"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
-texture = ExtResource("7_8kdgp")
+texture = ExtResource("15_acxsc")
 
 [node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/vanilla"]
 layout_mode = 0
@@ -935,6 +941,7 @@ offset_bottom = 165.0
 text = "inventory:"
 
 [node name="cocoa" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
@@ -989,6 +996,7 @@ offset_bottom = 165.0
 text = "inventory:"
 
 [node name="hwhipcream" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
@@ -1045,6 +1053,7 @@ offset_bottom = 165.0
 text = "inventory:"
 
 [node name="oil" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
@@ -1099,6 +1108,7 @@ offset_bottom = 165.0
 text = "inventory:"
 
 [node name="water" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
@@ -1153,6 +1163,7 @@ offset_bottom = 165.0
 text = "inventory:"
 
 [node name="cowcheese" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
@@ -1208,6 +1219,7 @@ offset_bottom = 165.0
 text = "inventory:"
 
 [node name="lemon" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
@@ -1262,6 +1274,7 @@ offset_bottom = 165.0
 text = "inventory:"
 
 [node name="sourcream" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
@@ -1316,6 +1329,7 @@ offset_bottom = 165.0
 text = "inventory:"
 
 [node name="jam" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
@@ -1370,6 +1384,7 @@ offset_bottom = 165.0
 text = "inventory:"
 
 [node name="banana" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 

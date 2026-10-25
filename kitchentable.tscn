@@ -1,41 +1,298 @@
-[gd_scene load_steps=6 format=3 uid="uid://borq5pqbmmgdp"]
+[gd_scene load_steps=40 format=3 uid="uid://borq5pqbmmgdp"]
 
 [ext_resource type="Script" uid="uid://yuwsgepkshml" path="res://wsugar.gd" id="1_3nmhd"]
-[ext_resource type="Texture2D" uid="uid://bwbwuq3ugtf2s" path="res://icon.svg" id="1_qf70m"]
+[ext_resource type="Texture2D" uid="uid://drd8lonn2r732" path="res://init_assets/wsugar.png" id="1_owg2j"]
+[ext_resource type="Texture2D" uid="uid://rkclqpmjonqp" path="res://init_assets/bolgol.png" id="2_0ntdi"]
+[ext_resource type="Texture2D" uid="uid://bw7leta8ai5xs" path="res://init_assets/bolplin.png" id="3_jiofk"]
 [ext_resource type="PackedScene" uid="uid://m4hbalypdy4p" path="res://back_button.tscn" id="3_owg2j"]
+[ext_resource type="Texture2D" uid="uid://mgtb3olwo7hq" path="res://init_assets/image-removebg-preview (53).png" id="4_b2ppu"]
+[ext_resource type="Script" uid="uid://bhjutocwttnxh" path="res://bowl.gd" id="4_jojli"]
+[ext_resource type="Script" uid="uid://t2fjf4owu3iy" path="res://milk.gd" id="7_1e0qk"]
+[ext_resource type="Texture2D" uid="uid://d0a6bgnlrn0t" path="res://init_assets/lapteidle.png" id="7_je1yt"]
+[ext_resource type="Script" uid="uid://r5fnqal4wsv8" path="res://yeast.gd" id="8_jiofk"]
+[ext_resource type="Texture2D" uid="uid://bbmh0desvjxw7" path="res://init_assets/image-removebg-preview (42).png" id="10_pf3p3"]
+[ext_resource type="Script" uid="uid://dftdm57bhnoy" path="res://egg.gd" id="11_jsioe"]
+[ext_resource type="Script" uid="uid://dtej7k5cpgtmy" path="res://vanilla.gd" id="12_uhevc"]
+[ext_resource type="Texture2D" uid="uid://cgc6wls6xs1df" path="res://init_assets/ou.png" id="12_x426g"]
+[ext_resource type="Texture2D" uid="uid://d2xkjwduvyst7" path="res://init_assets/flour.png" id="13_xy0ns"]
+[ext_resource type="Texture2D" uid="uid://beimvdwpp0boj" path="res://init_assets/image-removebg-preview (41).png" id="14_h4lmt"]
+[ext_resource type="Script" uid="uid://bglu1scqxg4ol" path="res://flour.gd" id="14_tw3j7"]
+[ext_resource type="Script" uid="uid://cekmpyy05mf6s" path="res://salt.gd" id="15_3v5dp"]
+[ext_resource type="Script" uid="uid://lfcsn52b5w1t" path="res://butter.gd" id="16_b2ppu"]
+[ext_resource type="Texture2D" uid="uid://drdojoxoet4it" path="res://init_assets/butter.png" id="16_uhevc"]
+[ext_resource type="Texture2D" uid="uid://dqa6auir3aaic" path="res://init_assets/image-removebg-preview (40).png" id="18_83cp1"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_owg2j"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_je1yt"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_qf70m")
+"texture": ExtResource("2_0ntdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jiofk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b2ppu")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qf70m"]
-radius = 51.0
-height = 148.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_effw3"]
+radius = 67.01349
+height = 266.0193
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_owg2j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_owg2j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xy0ns"]
+size = Vector2(532.0313, 320.20563)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_th8nq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_je1yt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ipad"]
+radius = 54.81241
+height = 258.2516
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4qwgm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_pf3p3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jsioe"]
+size = Vector2(129.14482, 102.50656)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tw3j7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_x426g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3v5dp"]
+radius = 62.933716
+height = 131.21509
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b2ppu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_h4lmt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf3p3"]
+size = Vector2(127.64316, 159.56445)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pf3p3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_xy0ns")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x426g"]
+size = Vector2(194.66667, 325.33337)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x426g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_83cp1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4lmt"]
+size = Vector2(120.416016, 181.03851)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xy0ns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_uhevc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tw3j7"]
+size = Vector2(344.96176, 152.35803)
 
 [node name="kitchentable" type="Node2D"]
 metadata/_edit_vertical_guides_ = [232.0, 460.0, 690.0, 920.0]
-
-[node name="BKG" type="Sprite2D" parent="."]
-
-[node name="Wsugar" type="AnimatedSprite2D" parent="."]
-position = Vector2(158, 110)
-sprite_frames = SubResource("SpriteFrames_owg2j")
-script = ExtResource("1_3nmhd")
-
-[node name="Area2D" type="Area2D" parent="Wsugar"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wsugar/Area2D"]
-shape = SubResource("CapsuleShape2D_qf70m")
 
 [node name="BackButton" parent="." instance=ExtResource("3_owg2j")]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 4.0
 offset_bottom = 4.0
+
+[node name="BKG" type="Sprite2D" parent="."]
+
+[node name="bowl" type="AnimatedSprite2D" parent="."]
+position = Vector2(566, 464)
+sprite_frames = SubResource("SpriteFrames_je1yt")
+script = ExtResource("4_jojli")
+
+[node name="Area2D" type="Area2D" parent="bowl"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bowl/Area2D"]
+position = Vector2(3, 8)
+rotation = 1.5673125
+shape = SubResource("CapsuleShape2D_effw3")
+
+[node name="wsugar" type="AnimatedSprite2D" parent="."]
+position = Vector2(451, 332)
+scale = Vector2(0.18717946, 0.18879335)
+sprite_frames = SubResource("SpriteFrames_owg2j")
+script = ExtResource("1_3nmhd")
+
+[node name="Area2D" type="Area2D" parent="wsugar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wsugar/Area2D"]
+position = Vector2(16.19873, 14.7146)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_xy0ns")
+
+[node name="milk" type="AnimatedSprite2D" parent="."]
+position = Vector2(217, 356)
+scale = Vector2(0.4702836, 0.47433844)
+sprite_frames = SubResource("SpriteFrames_th8nq")
+script = ExtResource("7_1e0qk")
+
+[node name="Area2D" type="Area2D" parent="milk"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="milk/Area2D"]
+rotation = -0.0027370453
+shape = SubResource("CapsuleShape2D_5ipad")
+
+[node name="yeast" type="AnimatedSprite2D" parent="."]
+position = Vector2(766.0115, 394.842)
+scale = Vector2(0.6033645, 0.6085667)
+sprite_frames = SubResource("SpriteFrames_4qwgm")
+script = ExtResource("8_jiofk")
+
+[node name="Area2D" type="Area2D" parent="yeast"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="yeast/Area2D"]
+position = Vector2(-9.963253, 6.83243)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_jsioe")
+
+[node name="egg" type="AnimatedSprite2D" parent="."]
+position = Vector2(521, 346)
+scale = Vector2(0.39724308, 0.3972431)
+sprite_frames = SubResource("SpriteFrames_tw3j7")
+script = ExtResource("11_jsioe")
+
+[node name="Area2D" type="Area2D" parent="egg"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="egg/Area2D"]
+position = Vector2(-5.0347004, -2.5173502)
+rotation = -1.5937793
+shape = SubResource("CapsuleShape2D_3v5dp")
+
+[node name="vanilla" type="AnimatedSprite2D" parent="."]
+position = Vector2(310.6607, 326.9316)
+scale = Vector2(0.40926248, 0.40926254)
+sprite_frames = SubResource("SpriteFrames_b2ppu")
+script = ExtResource("12_uhevc")
+
+[node name="Area2D" type="Area2D" parent="vanilla"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="vanilla/Area2D"]
+position = Vector2(5.7158976, 5.053953)
+scale = Vector2(1, 0.9999999)
+shape = SubResource("RectangleShape2D_pf3p3")
+
+[node name="flour" type="AnimatedSprite2D" parent="."]
+position = Vector2(420, 318)
+scale = Vector2(0.375, 0.375)
+sprite_frames = SubResource("SpriteFrames_pf3p3")
+script = ExtResource("14_tw3j7")
+
+[node name="Area2D" type="Area2D" parent="flour"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flour/Area2D"]
+position = Vector2(14.6666565, -13.333374)
+shape = SubResource("RectangleShape2D_x426g")
+
+[node name="salt" type="AnimatedSprite2D" parent="."]
+position = Vector2(953.07935, 394.5613)
+scale = Vector2(0.36816573, 0.36816573)
+sprite_frames = SubResource("SpriteFrames_x426g")
+script = ExtResource("15_3v5dp")
+
+[node name="Area2D" type="Area2D" parent="salt"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="salt/Area2D"]
+position = Vector2(24.229927, -9.673065)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_h4lmt")
+
+[node name="butter" type="AnimatedSprite2D" parent="."]
+position = Vector2(678.00006, 391)
+scale = Vector2(0.3478647, 0.34786472)
+sprite_frames = SubResource("SpriteFrames_xy0ns")
+script = ExtResource("16_b2ppu")
+
+[node name="Area2D" type="Area2D" parent="butter"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="butter/Area2D"]
+position = Vector2(11.498718, -64.68042)
+shape = SubResource("RectangleShape2D_tw3j7")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 559.0
+offset_top = 21.0
+offset_right = 796.0
+offset_bottom = 278.0
+text = "1.Milk
+2.Sugar
+3.Yeast
+4.Egg
+5.Vanilla
+6.Flour
+7.Slat
+*press on the bowl
+8.Butter
+*press on the bowl - and done!"

@@ -23,3 +23,13 @@ position = Vector2(15.921509, -11.372559)
 shape = SubResource("RectangleShape2D_bvupd")
 
 [node name="slider" parent="." instance=ExtResource("2_bvupd")]
+
+[node name="proceed_b" type="Button" parent="."]
+offset_left = 1013.0
+offset_top = 580.0
+offset_right = 1139.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 30
+text = "Proceed"
+
+[connection signal="pressed" from="proceed_b" to="." method="_on_proceed_b_pressed"]

@@ -3,14 +3,12 @@ extends Control
 @onready var maximumqty: Label = $HSlider/maximumqty
 @onready var slider: HSlider = $HSlider
 var progress = 0
-var progress_total = 0
 
 func _ready() -> void:
-	if global.dish_selection == 1:
-		progress_total = 11
 	progress = 0
 	self.visible = false
 	slider.value = 0
+	$"../proceed_b".visible = false
 
 func _process(delta: float) -> void:
 	#aspect of the slider
@@ -136,8 +134,8 @@ func _process(delta: float) -> void:
 		quantity.text = "quantity: " + str(global.invc_banana)
 	
 	#change of scene to the actual cooking part when all ingredients have been selected
-	if progress == progress_total:
-		get_tree().change_scene_to_file("res://kitchentable.tscn") #probabil va trb schimbat ulterior idk
+	if progress == global.progress_total:
+		$"../proceed_b".visible = true
 
 func _on_proceed_pressed() -> void:
 	#in if-urile astea ar mai trebui niste verificari cu daca ai suficent pt reteta cand selectezi

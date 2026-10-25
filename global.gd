@@ -1,10 +1,13 @@
 extends Node
 
 #general
-var dish_selection = 0
+var dish_selection = 1 #ar trb sa fie 0 in mod normal
+var current_step = 0
 var display_selection = 0
 var price = 0
 var money = 10
+var progress_total = 0   #numarul total de pasi de care ai nevoie pentru a termina dish-ul
+var progress_c = 1       #pasul de la gatit
 
 #inventory for ingredients
 var inv_flour = 0
@@ -55,3 +58,7 @@ var inv_treat1 = 12  #de schimbat in cinnamonroll
 
 #slider selection signal
 var slider_selec = 0
+
+func _process(delta: float) -> void:
+	print(global.progress_c)
+	await get_tree().create_timer(1).timeout

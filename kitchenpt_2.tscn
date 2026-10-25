@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ca2dv6w71kacn"]
+
+[node name="kitchenpt2" type="Node2D"]
+
+[node name="fridge" type="AnimatedSprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="fridge"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fridge/Area2D"]
+
+[node name="oven" type="AnimatedSprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="oven"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="oven/Area2D"]

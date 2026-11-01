@@ -1,3 +1,5 @@
+How to run the game: open the itch.io link in your browser
+How to play the game:
 Hello! This is a cooking game in which you can do a few things:
 1. Bakery: you can click on the low-right corner of the screen and you will be redirected inside the bakery's display, from where you can select to serve your client a cinnamonn roll by clicking on it and dragging it to him! Your will recieve coins for the cinnamons you sell
 2. Kitchen: here you can prepare doughnuts! You can do it by clicking and dragging each ingredient to the bowl, in the order presented in the list inside the game. Once ready, just press the bowl and the doughnuts will appear!

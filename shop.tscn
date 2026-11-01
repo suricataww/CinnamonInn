@@ -2594,6 +2594,7 @@ offset_right = 21.0
 offset_bottom = 14.0
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
 amount = 5
 texture = ExtResource("18_tuxin")
 lifetime = 0.8

@@ -1,7 +1,8 @@
-[gd_scene load_steps=40 format=3 uid="uid://borq5pqbmmgdp"]
+[gd_scene load_steps=58 format=3 uid="uid://borq5pqbmmgdp"]
 
 [ext_resource type="Script" uid="uid://yuwsgepkshml" path="res://wsugar.gd" id="1_3nmhd"]
 [ext_resource type="Texture2D" uid="uid://drd8lonn2r732" path="res://init_assets/wsugar.png" id="1_owg2j"]
+[ext_resource type="Script" uid="uid://cm36u8rrpekiq" path="res://kitchentable.gd" id="1_x426g"]
 [ext_resource type="Texture2D" uid="uid://rkclqpmjonqp" path="res://init_assets/bolgol.png" id="2_0ntdi"]
 [ext_resource type="Texture2D" uid="uid://bw7leta8ai5xs" path="res://init_assets/bolplin.png" id="3_jiofk"]
 [ext_resource type="PackedScene" uid="uid://m4hbalypdy4p" path="res://back_button.tscn" id="3_owg2j"]
@@ -21,6 +22,7 @@
 [ext_resource type="Script" uid="uid://lfcsn52b5w1t" path="res://butter.gd" id="16_b2ppu"]
 [ext_resource type="Texture2D" uid="uid://drdojoxoet4it" path="res://init_assets/butter.png" id="16_uhevc"]
 [ext_resource type="Texture2D" uid="uid://dqa6auir3aaic" path="res://init_assets/image-removebg-preview (40).png" id="18_83cp1"]
+[ext_resource type="Script" uid="uid://dmdbagxocxejc" path="res://v_box_container.gd" id="22_h4lmt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_je1yt"]
 animations = [{
@@ -157,7 +159,48 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tw3j7"]
 size = Vector2(344.96176, 152.35803)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pf3p3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x426g"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h4lmt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83cp1"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eu6bo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqcyp"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2i5s8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xehk"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o8xfb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqfyf"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nnv2e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq7g2"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1df1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_282r4"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g044k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vutc"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="kitchentable" type="Node2D"]
+script = ExtResource("1_x426g")
 metadata/_edit_vertical_guides_ = [232.0, 460.0, 690.0, 920.0]
 
 [node name="BackButton" parent="." instance=ExtResource("3_owg2j")]
@@ -281,18 +324,220 @@ script = ExtResource("16_b2ppu")
 position = Vector2(11.498718, -64.68042)
 shape = SubResource("RectangleShape2D_tw3j7")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 559.0
-offset_top = 21.0
-offset_right = 796.0
-offset_bottom = 278.0
-text = "1.Milk
-2.Sugar
-3.Yeast
-4.Egg
-5.Vanilla
-6.Flour
-7.Slat
-*press on the bowl
-8.Butter
-*press on the bowl - and done!"
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 588.0
+offset_top = 29.0
+offset_right = 825.0
+offset_bottom = 286.0
+size_flags_horizontal = 0
+script = ExtResource("22_h4lmt")
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "1.Milk"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 10
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/Label/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_pf3p3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_x426g")
+value = 44.54
+show_percentage = false
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "2.Sugar"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Label2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/Label2/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_h4lmt")
+theme_override_styles/fill = SubResource("StyleBoxFlat_83cp1")
+value = 70.0
+show_percentage = false
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "3.Yeast"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Label3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/Label3/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_eu6bo")
+theme_override_styles/fill = SubResource("StyleBoxFlat_sqcyp")
+show_percentage = false
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "4.Eggs"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Label4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/Label4/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_2i5s8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1xehk")
+show_percentage = false
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "5.Vanilla"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Label5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/Label5/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_o8xfb")
+theme_override_styles/fill = SubResource("StyleBoxFlat_iqfyf")
+show_percentage = false
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "6.Flour"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Label6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/Label6/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_nnv2e")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pq7g2")
+show_percentage = false
+
+[node name="Label7" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "7.Salt"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Label7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/Label7/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_y1df1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_282r4")
+show_percentage = false
+
+[node name="Label8" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "*press on the bowl"
+
+[node name="Label9" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "8.Butter"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Label9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/Label9/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_g044k")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0vutc")
+show_percentage = false
+
+[node name="Label10" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "*press on  the bowl - and done!"

@@ -55,13 +55,253 @@ func _ready() -> void:
 		global.invcn_oil = 200
 		#aici trb sa adaug in plus pasi pt partile de amestecat/bagat la cuptor/firigder, etc.
 		#la doughnuts ce am zis sus am luat in considerare, la restul inca nu
-	if global.dish_selection == 2:
+	if global.dish_selection == 2: #crepes
 		global.progress_total = 9
-	if global.dish_selection == 3:
-		global.progress_total = 11
-	if global.dish_selection == 4:
-		global.progress_total = 10 #aici am numarat si smantana si gemul, poate ar trb sa le pun la decorat separat
-	#to be continued with the others cand aleg o ordine finala
+		global.invcn_flour = 220
+		global.invcn_wsugar = 70
+		global.invcn_milk = 500
+		global.invcn_eggs = 3
+		global.invcn_salt = 4
+		global.invcn_vanilla = 1
+		global.invcn_hwhipcream = 100
+		global.invcn_oil = 15
+		global.invcn_water = 80
+		#global.invcn_jam = ?
+	if global.dish_selection == 3: #cinnamon rolls
+		global.progress_total = 11 #needs to be modified
+		global.invcn_flour = 500
+		global.invcn_wsugar = 270
+		global.invcn_bsugar = 220
+		global.invcn_butter = 410
+		global.invcn_milk = 150
+		global.invcn_eggs = 3
+		global.invcn_yeast = 10
+		global.invcn_salt = 15
+		global.invcn_creamcheese = 100
+		global.invcn_vanilla = 1
+		global.invcn_cinnamon = 20
+	if global.dish_selection == 4: #applepie
+		#global.progres_total = ?
+		global.invcn_flour = 500
+		global.invcn_wsugar = 300
+		global.invcn_butter = 250
+		global.invcn_eggs = 2
+		global.invcn_yeast = 10
+		global.invcn_cinnamon = 10
+		global.invcn_sourcream = 200
+	if global.dish_selection == 5: #cookies
+		#global.progress_total = ?
+		global.invcn_flour = 180
+		global.invcn_wsugar = 75
+		global.invcn_bsugar = 75
+		global.invcn_butter = 120
+		global.invcn_eggs = 1
+		global.invcn_yeast = 5
+		global.invcn_salt = 4
+		global.invcn_vanilla = 1
+		global.invcn_chocolate = 150
+	if global.dish_selection == 6: #brownie
+		#global.progress_total = ?
+		global.invcn_wsugar = 500
+		global.invcn_butter = 200
+		global.invcn_milk = 175
+		global.invcn_eggs = 5
+		global.invcn_yeast = 5
+		global.invcn_vanilla = 1
+		global.invcn_cocoa = 15
+	if global.dish_selection == 7: #chec de mere
+		#global.progress_total = ?
+		global.invcn_flour = 180
+		global.invcn_wsugar = 100
+		global.invcn_bsugar = 110
+		global.invcn_butter = 120
+		global.invcn_eggs = 2
+		global.invcn_yeast = 5
+		global.invcn_salt = 4
+		global.invcn_cinnamon = 10
+		global.invcn_nutmeg = 4
+	if global.dish_selection == 8: #muffins
+		#global.progress_total = ?
+		global.invcn_flour = 400
+		global.invcn_wsugar = 250
+		global.incvn_milk = 250
+		global.invcn_eggs = 2
+		global.invcn_yeast = 15
+		global.invcn_salt = 15
+		global.invcn_oil = 125
+		global.invcn_chocolate = 100
+	if global.dish_selection == 9: #papanasi
+		#global.progress_total = ?
+		global.invcn_flour = 180
+		global.invcn_wsugar = 60
+		global.invcn_eggs = 2
+		global.invcn_salt = 4
+		global.invcn_vanilla = 1
+		global.invcn_oil = 200
+		global.invcn_cowcheese = 250
+		global.invcn_lemon = 30
+		global.invcn_sourcream = 100
+		global.invcn_jam = 100
+	if global.dish_selection == 10: #cheesepie
+		#global.progress_total = ?
+		global.invcn_flour = 500
+		global.invcn_eggs = 2
+		global.invcn_salt = 4
+		global.invcn_oil = 10
+		global.invcn_water = 350
+		global.invcn_cowcheese = 500
+	if global.dish_selection == 11: #chocolate brioche
+		#global.progress_total = ?
+		global.invcn_flour = 550
+		global.invcn_wsugar = 70
+		global.invcn_milk = 200
+		global.invcn_eggs = 2
+		global.invcn_yeast = 7
+		global.invcn_vanilla = 1
+		global.invcn_cocoa = 10
+		global.invcn_oil = 50
+	if global.dish_selection == 12: #pretzel
+		#global.progress_total = ?
+		global.invcn_flour = 320
+		global.invcn_milk = 30
+		global.invcn_yeast = 10
+		global.invcn_salt = 5
+		global.invcn_vailla = 1
+		global.invcn_oil = 10
+		global.invcn_agaves = 30
+	if global.dish_selection == 13: #tiramisu
+		#global.progress_total = ?
+		global.invcn_wsugar = 70
+		global.invcn_cocoa = 10
+		global.invcn_hwhipcream = 360
+		global.invcn_mascarpone = 225
+		global.invcn_espresso = 360
+		global.invcn_ladyfingers = 400
+	if global.dish_selection == 14: #cheesecake
+		#global.progress_total = ?
+		global.invcn_wsugar = 170
+		global.invcn_butter = 100
+		global.invcn_creamcheese = 500
+		global.invcn_vanilla = 1
+		global.invcn_hwhipcream = 250
+		global.invcn_lemon = 5
+		global.invcn_biscuits = 200
+		global.invcn_gelatine = 10
+		global.invcn_fruits = 250
+	if global.dish_selection == 15: #french toast
+		#global.progress_total = ?
+		global.invcn_flour = 30
+		global.invcn_wsugar = 50
+		global.invcn_milk = 160
+		global.invcn_eggs = 4
+		global.invcn_salt = 4
+		global.invcn_vanilla = 1
+		global.invcn_cinnamon = 5
+		global.invcn_bread = 8
+	if global.dish_selection == 16: #carrot cake
+		#global.progress_total = ?
+		global.invcn_flour = 315
+		global.invcn_wsugar = 580
+		global.invcn_bsugar = 300
+		global.invcn_butter = 115
+		global.invcn_eggs = 4
+		global.invcn_yeast = 10
+		global.invcn_salt = 8
+		global.invcn_creamcheese = 450
+		global.invcn_vanilla = 2.5
+		global.invcn_cinnamon = 7
+		global.invcn_oil = 240
+		global.invcn_nutmeg = 2
+		global.invcn_walnuts = 260
+		global.invcn_applesauce = 180
+		global.invcn_ginger = 5
+		global.invcn_carrots = 260
+	if global.dish_selection == 17: #biscuit salami
+		#global.progress_total = ?
+		global.invcn_wsugar = 100
+		global.invcn_butter = 150
+		global.invcn_milk = 200
+		global.invcn_cocoa = 10
+		global.invcn_biscuits = 500
+		global.invcn_raisins = 100
+		global.invcn_coconut = 15
+		global.invcn_rumessence = 1
+	if global.dish_selection == 18: #gingerbread
+		#global.progress_total = ?
+		global.invcn_flour = 375
+		global.invcn_wsugar = 240
+		global.invcn_bsugar = 150
+		global.invcn_butter = 200
+		global.invcn_milk = 60
+		global.invcn_yeast = 4
+		global.invcn_salt = 3
+		global.invcn_cinnamon = 8
+		global.invcn_ginger = 6
+		global.invcn_molasses = 180
+	if global.dish_selection == 19: #cozonac
+		#global.progress_total = ?
+		global.invcn_flour = 500
+		global.invcn_wsugar = 155
+		global.invcn_butter = 90
+		global.invcn_milk = 185
+		global.invcn_eggs = 3
+		global.invcn_yeast = 25
+		global.invcn_salt = 8
+		global.invcn_vanilla = 1
+		global.invcn_cocoa = 10
+		global.invcn_chocolate = 150
+		global.invcn_rumessence = 1
+		global.invcn_rahat = 250
+	if global.dish_selection == 20: #kurtoskalacs
+		#global.progress_total = ?
+		global.invcn_flour = 500
+		global.invcn_wsugar = 30
+		global.invcn_butter = 50
+		global.invcn_milk = 250
+		global.invcn_eggs = 2
+		global.invcn_yeast = 30
+		global.invcn_salt = 4
+		global.invcn_cinnamon = 5
+	if global.dish_selection == 21: #amandina
+		#global.progress_total = ?
+		global.invcn_flour = 40
+		global.invcn_sugar = 470
+		global.invcn_butter = 250
+		global.invcn_eggs = 8
+		global.invcn_yeast = 4
+		global.invcn_salt = 4
+		global.invcn_cocoa = 30
+		global.invcn_hwhipcream = 80
+		global.invcn_oil = 15
+		global.invcn_water = 400
+		global.invcn_chocolate = 200
+		global.invcn_espresso = 20
+		global.invcn_rumessence = 2
+	if global.dish_selection == 22: #redvelvet cake
+		#global.progress_total = ?
+		global.invcn_flour = 350
+		global.invcn_wsugar = 550
+		global.invcn_milk = 250
+		global.invcn_eggs = 2
+		global.invcn_yeast = 8
+		global.invcn_salt = 2
+		global.invcn_creamcheese = 250
+		global.invcn_vanilla = 2
+		global.invcn_cocoa = 10
+		global.invcn_oil = 240
+		global.invcn_sourcream = 400
+		global.invcn_mascarpone = 500
+		global.invcn_vinegar = 5
+		global.invcn_reddye = 5
+	if global.dish_selection == 23: #lavacake
+		#global.progress_total = ?
+		global.invcn_flour = 30
+		global.invcn_wsugar = 50
+		global.invcn_butter = 115
+		global.invcn_eggs = 4
+		global.invcn_salt = 2
+		global.invcn_chocolate = 170
+	
 	#conectarile pentru functii:
 	flour.input_event.connect(flour_pressed)
 	wsugar.iput_event.connect(wsugar_pressed)

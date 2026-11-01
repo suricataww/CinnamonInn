@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cs57chc66tknb"]
+[gd_scene load_steps=32 format=3 uid="uid://cs57chc66tknb"]
 
 [ext_resource type="Script" uid="uid://bm408y0chifvt" path="res://display.gd" id="1_mytll"]
 [ext_resource type="Texture2D" uid="uid://cmcnt1xw22th8" path="res://init_assets/0c.png" id="2_md80r"]
@@ -16,6 +16,13 @@
 [ext_resource type="Texture2D" uid="uid://c7sgxnq70fkp" path="res://init_assets/9c.png" id="11_uiu4r"]
 [ext_resource type="Texture2D" uid="uid://gv3wsivqgptv" path="res://init_assets/11c.png" id="12_62obs"]
 [ext_resource type="Texture2D" uid="uid://bbqqw7a6vu7j5" path="res://init_assets/12c.png" id="13_bxqbu"]
+[ext_resource type="Script" uid="uid://dlsg3atnsbp1l" path="res://doughnuts_d.gd" id="17_2d6qp"]
+[ext_resource type="Texture2D" uid="uid://dimvdyr75c2q5" path="res://init_assets/5.png" id="17_fiupt"]
+[ext_resource type="Texture2D" uid="uid://dcnbbo0iu6q47" path="res://init_assets/6.png" id="18_62obs"]
+[ext_resource type="Texture2D" uid="uid://0aw2qhs65aah" path="res://init_assets/7.png" id="19_bxqbu"]
+[ext_resource type="Texture2D" uid="uid://2sljhc5naqf2" path="res://init_assets/8.png" id="20_lhye5"]
+[ext_resource type="Texture2D" uid="uid://bau00nutl3jf2" path="res://init_assets/9.png" id="21_fomna"]
+[ext_resource type="Texture2D" uid="uid://chh4rj5l2hauk" path="res://init_assets/10.png" id="22_xyl7a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_txl3f"]
 animations = [{
@@ -68,10 +75,59 @@ animations = [{
 size = Vector2(522.91974, 136.11055)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx2p0"]
-bg_color = Color(0.35531357, 0.35531357, 0.35531345, 0.5882353)
+bg_color = Color(0.2967776, 0.2967776, 0.2967776, 0.79607844)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2d6qp"]
-bg_color = Color(0.35686275, 0.35686275, 0.35686275, 0.5882353)
+bg_color = Color(0.29803923, 0.29803923, 0.29803923, 0.79607844)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvjw0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_fiupt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fiupt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fiupt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fiupt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fiupt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fiupt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_62obs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bxqbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_lhye5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fomna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xyl7a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2d6qp"]
+size = Vector2(458.3623, 165.4668)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agley"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0bd0"]
+bg_color = Color(0.29803923, 0.29803923, 0.29803923, 0.79607844)
 
 [node name="Display" type="Node2D"]
 script = ExtResource("1_mytll")
@@ -111,5 +167,37 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_2d6qp")
 
+[node name="doughnuts" type="AnimatedSprite2D" parent="."]
+position = Vector2(169, 285)
+scale = Vector2(0.5257849, 0.52578497)
+sprite_frames = SubResource("SpriteFrames_kvjw0")
+script = ExtResource("17_2d6qp")
+
+[node name="Area2D" type="Area2D" parent="doughnuts"]
+position = Vector2(-197.79953, -275.77814)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doughnuts/Area2D"]
+position = Vector2(175.92746, 278.63116)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_2d6qp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="doughnuts"]
+offset_left = 119.82086
+offset_top = -136.93811
+offset_right = 159.82086
+offset_bottom = -86.93811
+
+[node name="price" type="Label" parent="doughnuts/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_agley")
+
+[node name="inventory" type="Label" parent="doughnuts/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_h0bd0")
+
 [connection signal="mouse_entered" from="cinnamonroll/Area2D" to="cinnamonroll" method="hoover"]
 [connection signal="mouse_exited" from="cinnamonroll/Area2D" to="cinnamonroll" method="hooverout"]
+[connection signal="mouse_entered" from="doughnuts/Area2D" to="doughnuts" method="hoover"]
+[connection signal="mouse_exited" from="doughnuts/Area2D" to="doughnuts" method="hooverout"]

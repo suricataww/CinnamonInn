@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 func hoover() -> void:
 	price.visible = true
 	inventory.visible = true
-	price.text = "$10"
+	price.text = "$5"
 	inventory.text = str(global.inv_treat1)
 	#scale = Vector2(0.975,0.89)
 		
@@ -34,6 +34,6 @@ func pressed (viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		global.inv_treat1 -= 1
 		frame = global.inv_treat1
-		global.display_selection = 1 #specific pentru cinnamon roll
+		global.display_selection = 2 #specific pentru cinnamon roll; trb schimbat in 3
 		global.price = 5 #specific pentru cinnamon roll
 		get_tree().change_scene_to_file("res://bakery.tscn")

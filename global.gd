@@ -139,7 +139,8 @@ var invcn_vinegar = 0
 var invcn_reddye = 0
 
 #inventory for dishes
-var inv_treat1 = 12  #de schimbat in cinnamonroll
+var inv_doughnuts = 10  
+var inv_treat1 = 12  #momentan raspunde la cinnamon, should be deleted
 
 #slider selection signal
 var slider_selec = 0

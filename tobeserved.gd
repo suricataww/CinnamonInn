@@ -11,9 +11,9 @@ func _ready() -> void:
 	position = Vector2(340,539)
 	
 func _process(delta: float) -> void:
-	if global.display_selection > 0 and servit == false and global.inv_treat1 >= 0: # aici trb schimbat la global.inv_treat
+	if global.display_selection > 0 and servit == false: # aici trb schimbat la global.inv_treat
 	##pentru ca momentan merge doar cu varianta de cinnamon, nu se schimba pt fiecare treat in parte
-		frame = global.display_selection
+		frame = global.display_selection - 1
 		modulate.a = 1
 	if permis == true:
 		global_position = get_global_mouse_position()

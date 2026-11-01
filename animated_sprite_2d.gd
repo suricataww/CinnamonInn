@@ -9,18 +9,26 @@ func _ready() -> void:
 	modulate.a = 1
 	price.text = ""
 	inventory.text = ""
-	print(scale)
 	frame = global.inv_treat1
+	price.visible = false
+	inventory.visible = false
+
+func _process(delta: float) -> void:
+	pass
 
 func hoover() -> void:
+	price.visible = true
+	inventory.visible = true
 	price.text = "$10"
 	inventory.text = str(global.inv_treat1)
-	scale = Vector2(0.975,0.89)
+	#scale = Vector2(0.975,0.89)
 		
 func hooverout() -> void:
+	price.visible = false
+	inventory.visible = false
 	price.text = ""
 	inventory.text = ""
-	scale = Vector2(0.944504, 0.867921)
+	#scale = Vector2(0.944504, 0.867921)
 	
 func pressed (viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

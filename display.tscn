@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bm408y0chifvt" path="res://display.gd" id="1_mytll"]
 [ext_resource type="Texture2D" uid="uid://cmcnt1xw22th8" path="res://init_assets/0c.png" id="2_md80r"]
-[ext_resource type="Texture2D" uid="uid://cgjcjyuw4jjeh" path="res://init_assets/init_bkg_display.png" id="2_wx2p0"]
+[ext_resource type="Texture2D" uid="uid://wa20yoayyeev" path="res://init_assets/bkg_display_init2.png" id="2_wx2p0"]
 [ext_resource type="Script" uid="uid://bxl7nwsbx3y55" path="res://animated_sprite_2d.gd" id="3_tbhi7"]
 [ext_resource type="Texture2D" uid="uid://cdsrqghviuxnp" path="res://init_assets/1c.png" id="3_uiu4r"]
 [ext_resource type="Texture2D" uid="uid://dvjsxiagaj1oq" path="res://init_assets/2c.png" id="4_wx2p0"]
@@ -82,8 +82,8 @@ scale = Vector2(1.1454183, 1.15)
 texture = ExtResource("2_wx2p0")
 
 [node name="cinnamonroll" type="AnimatedSprite2D" parent="."]
-position = Vector2(302, 501.00003)
-scale = Vector2(0.94450426, 0.8679211)
+position = Vector2(267.13193, 497.33804)
+scale = Vector2(0.7672205, 0.7504708)
 sprite_frames = SubResource("SpriteFrames_txl3f")
 animation = &"new_animation"
 script = ExtResource("3_tbhi7")

@@ -133,6 +133,18 @@ func _process(delta: float) -> void:
 		global.inv_banana = slider.value
 		quantity.text = "quantity: " + str(global.invc_banana)
 	
+	if global.slider_selec == 21:
+		slider.max_value = global.inv_chocolate
+		maximumqty.text = str(global.inv_chocolate)
+		global.invc_chocolate = slider.value
+		quantity.text = "quantity: " + str(global.invc_chocolate) + "g"
+	
+	if global.slider_selec == 22:
+		slider.max_value = global.inv_nutmeg
+		maximumqty.text = str(global.inv_nutmeg)
+		global.invc_nutmeg = slider.value
+		quantity.text = "quantity: " + str(global.invc_nutmeg) + "g"
+	
 	#change of scene to the actual cooking part when all ingredients have been selected
 	if progress == global.progress_total:
 		$"../proceed_b".visible = true
@@ -145,47 +157,159 @@ func _on_proceed_pressed() -> void:
 	#adica cate itemuri mai ai de luat de pe raft pentru a putea sa faci reteta
 	self.visible = false
 	if global.slider_selec == 1:
-		global.inv_flour -= global.invc_flour
+		if global.invc_flour >= global.invcn_flour and global.invcn_flour >= 0:
+			global.inv_flour -= global.invc_flour
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 2:
-		global.inv_wsugar -= global.invc_wsugar
+		if global.invc_wsugar >= global.invcn_wsugar and global.invcn_wsugar >= 0:
+			global.inv_wsugar -= global.invc_wsugar
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 3:
-		global.inv_bsugar -= global.invc_bsugar
+		if global.invc_bsugar >= global.invcn_bsugar and global.invcn_bsugar >= 0:
+			global.inv_bsugar -= global.invc_bsugar
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 4:
-		global.inv_butter -= global.invc_butter
+		if global.invc_butter >= global.invcn_butter and global.invcn_butter >= 0:
+			global.inv_butter -= global.invc_butter
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 5:
-		global.inv_cinnamonp -= global.invc_cinnamonp
+		if global.invc_cinnamonp >= global.invcn_cinnamonp and global.invcn_cinnamonp >= 0:
+			global.inv_cinnamonp -= global.invc_cinnamonp
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 6:
-		global.inv_milk -= global.invc_milk
+		if global.invc_milk >= global.invcn_milk and global.invcn_milk >= 0:
+			global.inv_milk -= global.invc_milk
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 7:
-		global.inv_eggs -= global.invc_eggs
+		if global.invc_eggs >= global.invcn_eggs and global.invcn_eggs >= 0:
+			global.inv_eggs -= global.invc_eggs
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 8:
-		global.inv_yeast -= global.invc_yeast
+		if global.invc_yeast >= global.invcn_yeast and global.invcn_yeast >= 0:
+			global.inv_yeast -= global.invc_yeast
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 9:
-		global.inv_salt = global.invc_salt
+		if global.invc_salt >= global.invcn_salt and global.invcn_salt >= 0:
+			global.inv_salt = global.invc_salt
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 10:
-		global.inv_creamcheese -= global.invc_creamcheese
+		if global.invc_creamcheese >= global.invcn_creamcheese and global.invcn_creamcheese >= 0:
+			global.inv_creamcheese -= global.invc_creamcheese
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 11:
-		global.inv_vanilla -= global.invc_vanilla
+		if global.invc_vanilla >= global.invcn_vanilla and global.invcn_vanilla >= 0:
+			global.inv_vanilla -= global.invc_vanilla
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 12:
-		global.inv_cocoa -= global.invc_cocoa
+		if global.invc_cocoa >= global.invcn_cocoa and global.invcn_cocoa >= 0:
+			global.inv_cocoa -= global.invc_cocoa
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 13:
-		global.inv_hwhipcream -= global.invc_hwhipcream
+		if global.invc_hwhipcream >= global.invcn_hwhipcream and global.invcn_hwhipcream >= 0:
+			global.inv_hwhipcream -= global.invc_hwhipcream
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 14:
-		global.inv_oil -= global.invc_oil
+		if global.invc_oil >= global.invcn_oil and global.invcn_oil >= 0:
+			global.inv_oil -= global.invc_oil
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 15:
-		global.inv_water -= global.inv_oil
+		if global.invc_water >= global.invcn_water and global.invcn_water >= 0:
+			global.inv_water -= global.inv_oil
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop firs!")
 	if global.slider_selec == 16:
-		global.inv_cowcheese -= global.invc_cowcheese
+		if global.invc_cowcheese >= global.invcn_cowcheese and global.invcn_cowcheese >= 0:
+			global.inv_cowcheese -= global.invc_cowcheese
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 17:
-		global.inv_lemon -= global.invc_lemon
+		if global.invc_lemon >= global.invcn_lemon and global.invcn_lemon >= 0:
+			global.inv_lemon -= global.invc_lemon
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 18:
-		global.inv_sourcream -= global.invc_sourcream
+		if global.invc_sourcream >= global.invcn_sourcream and global.invcn_sourcream >= 0:
+			global.inv_sourcream -= global.invc_sourcream
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 19:
-		global.inv_jam -= global.invc_jam
+		if global.invc_jam >= global.invcn_jam and global.invcn_jam >= 0:
+			global.inv_jam -= global.invc_jam
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 	if global.slider_selec == 20:
-		global.inv_banana -= global.invc_banana
-	slider.value = 0
-	progress += 1
+		if global.invc_banana >= global.invcn_banana and global.invcn_banana >= 0:
+			global.inv_banana -= global.invc_banana
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
+	if global.slider_selec == 21:
+		if global.invc_chocolate >= global.invcn_chocolate and global.invcn_chocolate >= 0:
+			global.inv_chocolate -= global.invc_chocolate
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
+	if global.slider_selec == 22:
+		if global.invc_nutmeg >= global.invcn_nutmeg and global.invcn_nutmeg >=0 :
+			global.inv_nutmeg -= global.invc_nutmeg
+			slider.value = 0
+			progress += 1
+		else:
+			print("You don't have enough, go to shop first!")
 
 func _on_back_pressed() -> void:
 	self.visible = false

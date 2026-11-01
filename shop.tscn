@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bldw7xyvi6883"]
+[gd_scene load_steps=22 format=3 uid="uid://bldw7xyvi6883"]
 
 [ext_resource type="Texture2D" uid="uid://bn74vdwj5iel2" path="res://init_assets/Screenshot 2026-10-22 150934.png" id="1_e7rdd"]
 [ext_resource type="Script" uid="uid://dljjdq1b8dn4y" path="res://scroll_container.gd" id="1_gmb2m"]
@@ -17,6 +17,24 @@
 [ext_resource type="Texture2D" uid="uid://bbmh0desvjxw7" path="res://init_assets/image-removebg-preview (42).png" id="13_8lh4o"]
 [ext_resource type="Texture2D" uid="uid://dqa6auir3aaic" path="res://init_assets/image-removebg-preview (40).png" id="14_il0eq"]
 [ext_resource type="Texture2D" uid="uid://beimvdwpp0boj" path="res://init_assets/image-removebg-preview (41).png" id="15_acxsc"]
+[ext_resource type="Texture2D" uid="uid://t4v7tgddtoox" path="res://init_assets/image-removebg-preview (51).png" id="18_tuxin"]
+
+[sub_resource type="Curve" id="Curve_8lh4o"]
+_data = [Vector2(0, 0.28280318), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_il0eq"]
+curve = SubResource("Curve_8lh4o")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_acxsc"]
+particle_flag_disable_z = true
+angle_min = 1.0728835e-05
+angle_max = 180.00002
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 98, 0)
+scale_curve = SubResource("CurveTexture_il0eq")
 
 [node name="shop" type="Node2D"]
 script = ExtResource("1_xqmyw")
@@ -44,23 +62,23 @@ text = "decoration"
 [node name="BKG" type="Sprite2D" parent="."]
 position = Vector2(0, 41)
 
-[node name="ScrollContainer2" type="ScrollContainer" parent="."]
+[node name="decoration" type="ScrollContainer" parent="."]
 offset_left = 49.0
 offset_top = 99.0
 offset_right = 1101.0
 offset_bottom = 640.0
 script = ExtResource("2_msgp6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="decoration"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="flour" type="TextureRect" parent="ScrollContainer2/VBoxContainer"]
+[node name="flour" type="TextureRect" parent="decoration/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer2/VBoxContainer/flour"]
+[node name="ing_name" type="Label" parent="decoration/VBoxContainer/flour"]
 layout_mode = 0
 offset_left = 343.0
 offset_top = 60.0
@@ -69,12 +87,12 @@ offset_bottom = 129.0
 theme_override_font_sizes/font_size = 45
 text = "FLOUR"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer2/VBoxContainer/flour"]
+[node name="image" type="Sprite2D" parent="decoration/VBoxContainer/flour"]
 position = Vector2(119.00001, 90.00001)
 scale = Vector2(0.40571126, 0.40571126)
 texture = ExtResource("9_sw5c6")
 
-[node name="Button" type="Button" parent="ScrollContainer2/VBoxContainer/flour"]
+[node name="Button" type="Button" parent="decoration/VBoxContainer/flour"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -84,7 +102,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer2/VBoxContainer/flour"]
+[node name="price" type="Label" parent="decoration/VBoxContainer/flour"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -93,7 +111,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $2"
 
-[node name="qty" type="Label" parent="ScrollContainer2/VBoxContainer/flour"]
+[node name="qty" type="Label" parent="decoration/VBoxContainer/flour"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -102,7 +120,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 1000g"
 
-[node name="inv" type="Label" parent="ScrollContainer2/VBoxContainer/flour"]
+[node name="inv" type="Label" parent="decoration/VBoxContainer/flour"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -110,11 +128,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="wsugar" type="TextureRect" parent="ScrollContainer2/VBoxContainer"]
+[node name="wsugar" type="TextureRect" parent="decoration/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer2/VBoxContainer/wsugar"]
+[node name="ing_name" type="Label" parent="decoration/VBoxContainer/wsugar"]
 layout_mode = 0
 offset_left = 345.0
 offset_top = 31.0
@@ -124,12 +142,12 @@ theme_override_font_sizes/font_size = 45
 text = "WHITE
 SUGAR"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer2/VBoxContainer/wsugar"]
+[node name="image" type="Sprite2D" parent="decoration/VBoxContainer/wsugar"]
 position = Vector2(128, 96)
 scale = Vector2(0.24131718, 0.24131718)
 texture = ExtResource("9_sw5c6")
 
-[node name="Button" type="Button" parent="ScrollContainer2/VBoxContainer/wsugar"]
+[node name="Button" type="Button" parent="decoration/VBoxContainer/wsugar"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -139,7 +157,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer2/VBoxContainer/wsugar"]
+[node name="price" type="Label" parent="decoration/VBoxContainer/wsugar"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -148,7 +166,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $2"
 
-[node name="qty" type="Label" parent="ScrollContainer2/VBoxContainer/wsugar"]
+[node name="qty" type="Label" parent="decoration/VBoxContainer/wsugar"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -157,7 +175,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 500g"
 
-[node name="inv" type="Label" parent="ScrollContainer2/VBoxContainer/wsugar"]
+[node name="inv" type="Label" parent="decoration/VBoxContainer/wsugar"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -165,11 +183,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="bsugar" type="TextureRect" parent="ScrollContainer2/VBoxContainer"]
+[node name="bsugar" type="TextureRect" parent="decoration/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer2/VBoxContainer/bsugar"]
+[node name="ing_name" type="Label" parent="decoration/VBoxContainer/bsugar"]
 layout_mode = 0
 offset_left = 345.0
 offset_top = 31.0
@@ -179,12 +197,12 @@ theme_override_font_sizes/font_size = 45
 text = "BROWN
 SUGAR"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer2/VBoxContainer/bsugar"]
+[node name="image" type="Sprite2D" parent="decoration/VBoxContainer/bsugar"]
 position = Vector2(129.99998, 90.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("9_sw5c6")
 
-[node name="Button" type="Button" parent="ScrollContainer2/VBoxContainer/bsugar"]
+[node name="Button" type="Button" parent="decoration/VBoxContainer/bsugar"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -194,7 +212,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer2/VBoxContainer/bsugar"]
+[node name="price" type="Label" parent="decoration/VBoxContainer/bsugar"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -203,7 +221,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $4.5"
 
-[node name="qty" type="Label" parent="ScrollContainer2/VBoxContainer/bsugar"]
+[node name="qty" type="Label" parent="decoration/VBoxContainer/bsugar"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -212,7 +230,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 500g"
 
-[node name="inv" type="Label" parent="ScrollContainer2/VBoxContainer/bsugar"]
+[node name="inv" type="Label" parent="decoration/VBoxContainer/bsugar"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -220,11 +238,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="butter" type="TextureRect" parent="ScrollContainer2/VBoxContainer"]
+[node name="butter" type="TextureRect" parent="decoration/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer2/VBoxContainer/butter"]
+[node name="ing_name" type="Label" parent="decoration/VBoxContainer/butter"]
 layout_mode = 0
 offset_left = 345.0
 offset_top = 51.0
@@ -233,12 +251,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 45
 text = "BUTTER"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer2/VBoxContainer/butter"]
+[node name="image" type="Sprite2D" parent="decoration/VBoxContainer/butter"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("9_sw5c6")
 
-[node name="Button" type="Button" parent="ScrollContainer2/VBoxContainer/butter"]
+[node name="Button" type="Button" parent="decoration/VBoxContainer/butter"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -248,7 +266,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer2/VBoxContainer/butter"]
+[node name="price" type="Label" parent="decoration/VBoxContainer/butter"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -257,7 +275,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $12"
 
-[node name="qty" type="Label" parent="ScrollContainer2/VBoxContainer/butter"]
+[node name="qty" type="Label" parent="decoration/VBoxContainer/butter"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -266,7 +284,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 200g"
 
-[node name="inv" type="Label" parent="ScrollContainer2/VBoxContainer/butter"]
+[node name="inv" type="Label" parent="decoration/VBoxContainer/butter"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -274,11 +292,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="cinnamonp" type="TextureRect" parent="ScrollContainer2/VBoxContainer"]
+[node name="cinnamonp" type="TextureRect" parent="decoration/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer2/VBoxContainer/cinnamonp"]
+[node name="ing_name" type="Label" parent="decoration/VBoxContainer/cinnamonp"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -288,12 +306,12 @@ theme_override_font_sizes/font_size = 40
 text = "CINNAMON
 POWDER"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer2/VBoxContainer/cinnamonp"]
+[node name="image" type="Sprite2D" parent="decoration/VBoxContainer/cinnamonp"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("9_sw5c6")
 
-[node name="Button" type="Button" parent="ScrollContainer2/VBoxContainer/cinnamonp"]
+[node name="Button" type="Button" parent="decoration/VBoxContainer/cinnamonp"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -303,7 +321,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer2/VBoxContainer/cinnamonp"]
+[node name="price" type="Label" parent="decoration/VBoxContainer/cinnamonp"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -312,7 +330,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $5"
 
-[node name="qty" type="Label" parent="ScrollContainer2/VBoxContainer/cinnamonp"]
+[node name="qty" type="Label" parent="decoration/VBoxContainer/cinnamonp"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -321,7 +339,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 30g"
 
-[node name="inv" type="Label" parent="ScrollContainer2/VBoxContainer/cinnamonp"]
+[node name="inv" type="Label" parent="decoration/VBoxContainer/cinnamonp"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -329,23 +347,23 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="ingredients" type="ScrollContainer" parent="."]
 offset_left = 49.0
 offset_top = 99.0
 offset_right = 1101.0
 offset_bottom = 642.0
 script = ExtResource("1_gmb2m")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ingredients"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="flour" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="flour" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/flour"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/flour"]
 layout_mode = 0
 offset_left = 343.0
 offset_top = 60.0
@@ -354,12 +372,12 @@ offset_bottom = 129.0
 theme_override_font_sizes/font_size = 45
 text = "FLOUR"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/flour"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/flour"]
 position = Vector2(119.00001, 90.00001)
 scale = Vector2(0.40571126, 0.40571126)
 texture = ExtResource("2_blqjs")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/flour"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/flour"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -369,7 +387,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/flour"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/flour"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -378,7 +396,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $2"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/flour"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/flour"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -387,7 +405,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 1000g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/flour"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/flour"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -395,11 +413,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="wsugar" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="wsugar" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/wsugar"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/wsugar"]
 layout_mode = 0
 offset_left = 345.0
 offset_top = 31.0
@@ -409,12 +427,12 @@ theme_override_font_sizes/font_size = 45
 text = "WHITE
 SUGAR"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/wsugar"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/wsugar"]
 position = Vector2(128, 96)
 scale = Vector2(0.24131718, 0.24131718)
 texture = ExtResource("4_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/wsugar"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/wsugar"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -424,7 +442,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/wsugar"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/wsugar"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -433,7 +451,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $2"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/wsugar"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/wsugar"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -442,7 +460,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 500g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/wsugar"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/wsugar"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -450,11 +468,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="bsugar" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="bsugar" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/bsugar"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/bsugar"]
 layout_mode = 0
 offset_left = 345.0
 offset_top = 31.0
@@ -464,12 +482,12 @@ theme_override_font_sizes/font_size = 45
 text = "BROWN
 SUGAR"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/bsugar"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/bsugar"]
 position = Vector2(129.99998, 90.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("5_myf4l")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/bsugar"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/bsugar"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -479,7 +497,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/bsugar"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/bsugar"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -488,7 +506,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $4.5"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/bsugar"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/bsugar"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -497,7 +515,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 500g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/bsugar"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/bsugar"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -505,11 +523,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="butter" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="butter" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/butter"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/butter"]
 layout_mode = 0
 offset_left = 345.0
 offset_top = 51.0
@@ -518,12 +536,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 45
 text = "BUTTER"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/butter"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/butter"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("6_p5a0g")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/butter"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/butter"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -533,7 +551,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/butter"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/butter"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -542,7 +560,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $12"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/butter"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/butter"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -551,7 +569,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 200g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/butter"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/butter"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -559,11 +577,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="cinnamonp" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="cinnamonp" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/cinnamonp"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -573,12 +591,12 @@ theme_override_font_sizes/font_size = 40
 text = "CINNAMON
 POWDER"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/cinnamonp"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/cinnamonp"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -588,7 +606,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/cinnamonp"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -597,7 +615,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $5"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/cinnamonp"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -606,7 +624,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 30g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/cinnamonp"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/cinnamonp"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -614,11 +632,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="milk" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="milk" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/milk"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/milk"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -627,12 +645,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "MILK"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/milk"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/milk"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("11_jtxfs")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/milk"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/milk"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -642,7 +660,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/milk"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/milk"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -651,7 +669,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $10"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/milk"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/milk"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -660,7 +678,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 1000ml"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/milk"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/milk"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -668,11 +686,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="eggs" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="eggs" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/eggs"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/eggs"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -681,12 +699,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "EGGS"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/eggs"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/eggs"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("12_tuxin")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/eggs"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/eggs"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -696,7 +714,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/eggs"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/eggs"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -705,7 +723,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $15"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/eggs"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/eggs"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -714,7 +732,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 10"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/eggs"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/eggs"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -722,11 +740,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="yeast" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="yeast" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/yeast"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/yeast"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -735,12 +753,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "YEAST"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/yeast"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/yeast"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("13_8lh4o")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/yeast"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/yeast"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -750,7 +768,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/yeast"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/yeast"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -759,7 +777,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $1.5"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/yeast"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/yeast"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -768,7 +786,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 25g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/yeast"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/yeast"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -776,11 +794,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="salt" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="salt" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/salt"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/salt"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -789,12 +807,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "SALT"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/salt"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/salt"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("14_il0eq")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/salt"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/salt"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -804,7 +822,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/salt"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/salt"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -813,7 +831,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $2"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/salt"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/salt"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -822,7 +840,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 100g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/salt"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/salt"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -830,12 +848,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="creamcheese" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
-visible = false
+[node name="creamcheese" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/creamcheese"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/creamcheese"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -845,12 +862,12 @@ theme_override_font_sizes/font_size = 40
 text = "CREAM
 CHEESE"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/creamcheese"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/creamcheese"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/creamcheese"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/creamcheese"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -860,7 +877,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/creamcheese"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/creamcheese"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -869,7 +886,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $22.5"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/creamcheese"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/creamcheese"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -878,7 +895,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 500g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/creamcheese"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/creamcheese"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -886,11 +903,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="vanilla" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="vanilla" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/vanilla"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/vanilla"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -899,12 +916,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "VANILLA"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/vanilla"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/vanilla"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("15_acxsc")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/vanilla"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/vanilla"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -914,7 +931,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/vanilla"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/vanilla"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -923,7 +940,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $2.5"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/vanilla"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/vanilla"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -932,7 +949,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 1"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/vanilla"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/vanilla"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -940,12 +957,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="cocoa" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
-visible = false
+[node name="cocoa" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/cocoa"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/cocoa"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -954,12 +970,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "COCOA"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/cocoa"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/cocoa"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/cocoa"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/cocoa"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -969,7 +985,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/cocoa"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/cocoa"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -978,7 +994,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $13"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/cocoa"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/cocoa"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -987,7 +1003,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 100g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/cocoa"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/cocoa"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -995,12 +1011,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="hwhipcream" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
-visible = false
+[node name="hwhipcream" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/hwhipcream"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -1011,12 +1026,12 @@ text = "HEAVY
 WHIPPING
 CREAM"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/hwhipcream"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/hwhipcream"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -1026,7 +1041,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/hwhipcream"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -1035,7 +1050,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $20"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/hwhipcream"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -1044,7 +1059,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 500 ml"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/hwhipcream"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/hwhipcream"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -1052,12 +1067,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="oil" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
-visible = false
+[node name="oil" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/oil"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/oil"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -1066,12 +1080,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "OIL"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/oil"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/oil"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/oil"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/oil"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -1081,7 +1095,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/oil"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/oil"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -1090,7 +1104,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $2"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/oil"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/oil"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -1099,7 +1113,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 1000 ml"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/oil"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/oil"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -1107,12 +1121,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="water" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
-visible = false
+[node name="water" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/water"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/water"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -1121,12 +1134,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "WATER"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/water"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/water"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/water"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/water"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -1136,7 +1149,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/water"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/water"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -1145,7 +1158,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $4.5"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/water"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/water"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -1154,7 +1167,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 1000ml"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/water"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/water"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -1162,12 +1175,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="cowcheese" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
-visible = false
+[node name="cowcheese" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/cowcheese"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/cowcheese"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -1177,12 +1189,12 @@ theme_override_font_sizes/font_size = 40
 text = "COW
 CHEESE"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/cowcheese"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/cowcheese"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/cowcheese"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/cowcheese"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -1192,7 +1204,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/cowcheese"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/cowcheese"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -1201,7 +1213,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $5"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/cowcheese"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/cowcheese"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -1210,7 +1222,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 500g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/cowcheese"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/cowcheese"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -1218,12 +1230,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="lemon" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
-visible = false
+[node name="lemon" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/lemon"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/lemon"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -1232,12 +1243,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "LEMON"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/lemon"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/lemon"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/lemon"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/lemon"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -1247,7 +1258,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/lemon"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/lemon"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -1256,7 +1267,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $2"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/lemon"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/lemon"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -1265,7 +1276,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 200 g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/lemon"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/lemon"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -1273,12 +1284,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="sourcream" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
-visible = false
+[node name="sourcream" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/sourcream"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/sourcream"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -1287,12 +1297,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "SOURCREAM"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/sourcream"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/sourcream"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/sourcream"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/sourcream"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -1302,7 +1312,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/sourcream"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/sourcream"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -1311,7 +1321,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $12.5"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/sourcream"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/sourcream"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -1320,7 +1330,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 500 g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/sourcream"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/sourcream"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -1328,12 +1338,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="jam" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
-visible = false
+[node name="jam" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/jam"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/jam"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -1342,12 +1351,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "JAM"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/jam"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/jam"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/jam"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/jam"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -1357,7 +1366,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/jam"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/jam"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -1366,7 +1375,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $12"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/jam"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/jam"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -1375,7 +1384,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 200g"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/jam"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/jam"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -1383,12 +1392,11 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
-[node name="banana" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
-visible = false
+[node name="banana" type="TextureRect" parent="ingredients/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e7rdd")
 
-[node name="ing_name" type="Label" parent="ScrollContainer/VBoxContainer/banana"]
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/banana"]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 51.0
@@ -1397,12 +1405,12 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 40
 text = "BANANA"
 
-[node name="image" type="Sprite2D" parent="ScrollContainer/VBoxContainer/banana"]
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/banana"]
 position = Vector2(129.99998, 106.000015)
 scale = Vector2(0.42031014, 0.42031014)
 texture = ExtResource("7_8kdgp")
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/banana"]
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/banana"]
 layout_mode = 0
 offset_left = 875.0
 offset_top = 56.0
@@ -1412,7 +1420,7 @@ mouse_filter = 1
 theme_override_font_sizes/font_size = 35
 text = "Buy"
 
-[node name="price" type="Label" parent="ScrollContainer/VBoxContainer/banana"]
+[node name="price" type="Label" parent="ingredients/VBoxContainer/banana"]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 12.0
@@ -1421,7 +1429,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 25
 text = "price: $2"
 
-[node name="qty" type="Label" parent="ScrollContainer/VBoxContainer/banana"]
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/banana"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 72.0
@@ -1430,7 +1438,115 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 25
 text = "quantity: 1"
 
-[node name="inv" type="Label" parent="ScrollContainer/VBoxContainer/banana"]
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/banana"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="chocolate" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/chocolate"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "CHOCOLATE"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/chocolate"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/chocolate"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/chocolate"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $10"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/chocolate"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 100g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/chocolate"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="nutmeg" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/nutmeg"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "NUTMEG"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/nutmeg"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/nutmeg"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/nutmeg"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $8"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/nutmeg"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 15g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/nutmeg"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 142.0
@@ -1448,30 +1564,38 @@ offset_top = 14.0
 offset_right = 21.0
 offset_bottom = 14.0
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 5
+texture = ExtResource("18_tuxin")
+lifetime = 0.8
+process_material = SubResource("ParticleProcessMaterial_acxsc")
+
 [connection signal="pressed" from="HBoxContainer/Bingredients" to="." method="_on_bingredients_pressed"]
 [connection signal="pressed" from="HBoxContainer/Bdecoration" to="." method="_on_bdecoration_pressed"]
-[connection signal="pressed" from="ScrollContainer2/VBoxContainer/flour/Button" to="ScrollContainer2" method="_on_flour_pressed"]
-[connection signal="pressed" from="ScrollContainer2/VBoxContainer/wsugar/Button" to="ScrollContainer2" method="on_wsugar_pressed"]
-[connection signal="pressed" from="ScrollContainer2/VBoxContainer/bsugar/Button" to="ScrollContainer2" method="on_bsugar_pressed"]
-[connection signal="pressed" from="ScrollContainer2/VBoxContainer/butter/Button" to="ScrollContainer2" method="on_butter_pressed"]
-[connection signal="pressed" from="ScrollContainer2/VBoxContainer/cinnamonp/Button" to="ScrollContainer2" method="on_cinnamonp_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/flour/Button" to="ScrollContainer" method="_on_flour_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/wsugar/Button" to="ScrollContainer" method="on_wsugar_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/bsugar/Button" to="ScrollContainer" method="on_bsugar_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/butter/Button" to="ScrollContainer" method="on_butter_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/cinnamonp/Button" to="ScrollContainer" method="on_cinnamonp_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/milk/Button" to="ScrollContainer" method="on_milk_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/eggs/Button" to="ScrollContainer" method="on_eggs_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/yeast/Button" to="ScrollContainer" method="on_yeast_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/salt/Button" to="ScrollContainer" method="on_salt_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/creamcheese/Button" to="ScrollContainer" method="on_creamcheese_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/vanilla/Button" to="ScrollContainer" method="on_vanilla_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/cocoa/Button" to="ScrollContainer" method="on_vanilla_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/hwhipcream/Button" to="ScrollContainer" method="on_vanilla_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/oil/Button" to="ScrollContainer" method="on_vanilla_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/water/Button" to="ScrollContainer" method="on_vanilla_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/cowcheese/Button" to="ScrollContainer" method="on_vanilla_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/lemon/Button" to="ScrollContainer" method="on_vanilla_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/sourcream/Button" to="ScrollContainer" method="on_vanilla_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/jam/Button" to="ScrollContainer" method="on_vanilla_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/banana/Button" to="ScrollContainer" method="on_vanilla_pressed"]
+[connection signal="pressed" from="decoration/VBoxContainer/flour/Button" to="decoration" method="_on_flour_pressed"]
+[connection signal="pressed" from="decoration/VBoxContainer/wsugar/Button" to="decoration" method="on_wsugar_pressed"]
+[connection signal="pressed" from="decoration/VBoxContainer/bsugar/Button" to="decoration" method="on_bsugar_pressed"]
+[connection signal="pressed" from="decoration/VBoxContainer/butter/Button" to="decoration" method="on_butter_pressed"]
+[connection signal="pressed" from="decoration/VBoxContainer/cinnamonp/Button" to="decoration" method="on_cinnamonp_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/flour/Button" to="ingredients" method="_on_flour_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/wsugar/Button" to="ingredients" method="on_wsugar_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/bsugar/Button" to="ingredients" method="on_bsugar_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/butter/Button" to="ingredients" method="on_butter_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/cinnamonp/Button" to="ingredients" method="on_cinnamonp_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/milk/Button" to="ingredients" method="on_milk_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/eggs/Button" to="ingredients" method="on_eggs_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/yeast/Button" to="ingredients" method="on_yeast_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/salt/Button" to="ingredients" method="on_salt_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/creamcheese/Button" to="ingredients" method="on_creamcheese_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/vanilla/Button" to="ingredients" method="on_vanilla_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/cocoa/Button" to="ingredients" method="on_cocoa_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/hwhipcream/Button" to="ingredients" method="on_hwhipcream_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/oil/Button" to="ingredients" method="on_oil_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/water/Button" to="ingredients" method="on_water_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/cowcheese/Button" to="ingredients" method="on_cowcheese_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/lemon/Button" to="ingredients" method="on_lemon_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/sourcream/Button" to="ingredients" method="on_sourcream_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/jam/Button" to="ingredients" method="on_jam_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/banana/Button" to="ingredients" method="on_banana_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/chocolate/Button" to="ingredients" method="on_chocolate_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/nutmeg/Button" to="ingredients" method="on_nutmeg_pressed"]

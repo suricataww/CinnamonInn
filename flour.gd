@@ -11,6 +11,7 @@ func _ready() -> void:
 	print("#")
 	print(position)
 	position = Vector2(174,203)
+	add_to_group("flour")
 
 func _process(delta: float) -> void:
 	if permis == true:

@@ -1,7 +1,7 @@
 extends Node2D
-@onready var vbox_ing: ScrollContainer = $ScrollContainer
-@onready var vbox_deco: ScrollContainer = $ScrollContainer2 
-var type 
+@onready var vbox_ing: ScrollContainer = $ingredients
+@onready var vbox_deco: ScrollContainer = $decoration
+var type = 0
 
 func _ready() -> void:
 	type = 1

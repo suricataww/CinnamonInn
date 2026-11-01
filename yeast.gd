@@ -10,6 +10,7 @@ func _ready() -> void:
 	yeast.area_entered.connect(bowl_entered)
 	yeast.input_event.connect(mouse)
 	position = Vector2(933,340)
+	add_to_group("yeast")
 
 func _process(delta: float) -> void:
 	if permis == true:

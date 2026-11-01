@@ -10,6 +10,7 @@ func _ready() -> void:
 	wsugar.area_entered.connect(bowl_entered)
 	wsugar.input_event.connect(mouse)
 	position = Vector2(352,219)
+	add_to_group("wsugar")
 
 func _process(delta: float) -> void:
 	if permis == true:

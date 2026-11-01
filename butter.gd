@@ -9,6 +9,7 @@ func _ready() -> void:
 	butter.area_entered.connect(bowl_entered)
 	butter.input_event.connect(mouse)
 	position = Vector2(875,297)
+	add_to_group("butter")
 
 func _process(delta: float) -> void:
 	if permis == true:

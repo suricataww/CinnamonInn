@@ -9,6 +9,7 @@ func _ready() -> void:
 	egg.area_entered.connect(bowl_entered)
 	egg.input_event.connect(mouse)
 	position = Vector2(465,245)
+	add_to_group("egg")
 
 func _process(delta: float) -> void:
 	if permis == true:

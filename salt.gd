@@ -9,6 +9,7 @@ func _ready() -> void:
 	salt.area_entered.connect(bowl_entered)
 	salt.input_event.connect(mouse)
 	position = Vector2(929,373)
+	add_to_group("salt")
 
 func _process(delta: float) -> void:
 	if permis == true:

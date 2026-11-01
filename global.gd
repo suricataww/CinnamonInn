@@ -9,7 +9,7 @@ var money = 10
 var progress_total = 0   #numarul total de pasi de care ai nevoie pentru a termina dish-ul
 var progress_c = 1       #pasul de la gatit
 
-#inventory for ingredients
+#inventory for ingredients (=how nuch there is in the pantry)
 var inv_flour = 0
 var inv_wsugar = 0
 var inv_bsugar = 0
@@ -30,8 +30,29 @@ var inv_lemon = 0
 var inv_sourcream = 0
 var inv_jam = 0
 var inv_banana = 0
+var inv_chocolate = 0
+var inv_nutmeg = 0
+var inv_agaves = 0
+var inv_mascarpone = 0
+var inv_espresso = 0
+var inv_ladyfingers = 0
+var inv_biscuits = 0
+var inv_gelatine = 0
+var inv_fruits = 0
+var inv_bread = 0
+var inv_walnuts = 0
+var inv_applesauce = 0
+var inv_ginger = 0
+var inv_carrots = 0
+var inv_raisins = 0
+var inv_coconut = 0
+var inv_rumessence = 0
+var inv_molasses = 0
+var inv_rahat = 0
+var inv_vinegar = 0
+var inv_reddye = 0
 
-#inventory for ingredients while cooking
+#inventory for ingredients while cooking (=how much you take into cooking with you)
 var invc_flour = 0
 var invc_wsugar = 0
 var invc_bsugar = 0
@@ -52,6 +73,70 @@ var invc_lemon = 0
 var invc_sourcream = 0
 var invc_jam = 0
 var invc_banana = 0
+var invc_chocolate = 0
+var invc_nutmeg = 0
+var invc_agaves = 0
+var invc_mascarpone = 0
+var invc_espresso = 0
+var invc_ladyfingers = 0
+var invc_biscuits = 0
+var invc_gelatine = 0
+var invc_fruits = 0
+var invc_bread = 0
+var invc_walnuts = 0
+var invc_applesauce = 0
+var invc_ginger = 0
+var invc_carrots = 0
+var invc_raisins = 0
+var invc_coconut = 0
+var invc_rumessence = 0
+var invc_molasses = 0
+var invc_rahat = 0
+var invc_vinegar = 0
+var invc_reddye = 0
+
+#inventory for ingredients needed for cooking (=the recipe)
+var invcn_flour = 0
+var invcn_wsugar = 0
+var invcn_bsugar = 0
+var invcn_butter = 0
+var invcn_cinnamonp = 0
+var invcn_milk = 0
+var invcn_eggs = 0
+var invcn_yeast = 0
+var invcn_salt = 0
+var invcn_creamcheese = 0
+var invcn_vanilla = 0
+var invcn_cocoa = 0
+var invcn_hwhipcream = 0
+var invcn_oil = 0
+var invcn_water = 0
+var invcn_cowcheese = 0
+var invcn_lemon = 0
+var invcn_sourcream = 0
+var invcn_jam = 0
+var invcn_banana = 0
+var invcn_chocolate = 0
+var invcn_nutmeg = 0
+var invcn_agaves = 0
+var invcn_mascarpone = 0
+var invcn_espresso = 0
+var invcn_ladyfingers = 0
+var invcn_biscuits = 0
+var invcn_gelatine = 0
+var invcn_fruits = 0
+var invcn_bread = 0
+var invcn_walnuts = 0
+var invcn_applesauce = 0
+var invcn_ginger = 0
+var invcn_carrots = 0
+var invcn_raisins = 0
+var invcn_coconut = 0
+var invcn_rumessence = 0
+var invcn_molasses = 0
+var invcn_rahat = 0
+var invcn_vinegar = 0
+var invcn_reddye = 0
 
 #inventory for dishes
 var inv_treat1 = 12  #de schimbat in cinnamonroll
@@ -60,5 +145,4 @@ var inv_treat1 = 12  #de schimbat in cinnamonroll
 var slider_selec = 0
 
 func _process(delta: float) -> void:
-	print(global.progress_c)
 	await get_tree().create_timer(1).timeout

@@ -1554,6 +1554,1035 @@ offset_right = 675.0
 offset_bottom = 165.0
 text = "inventory:"
 
+[node name="agaves" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/agaves"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "AGAVE
+SAUCE"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/agaves"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/agaves"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/agaves"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $7.5"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/agaves"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 100ml"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/agaves"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="mascarpone" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/mascarpone"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "MASCARPONE"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/mascarpone"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/mascarpone"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/mascarpone"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $15"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/mascarpone"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 250g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/mascarpone"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="espresso" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/espresso"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "ESPRESSO"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/espresso"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/espresso"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/espresso"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $3"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/espresso"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 1"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/espresso"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="ladyfingers" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/ladyfingers"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "LADYFINGERS"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/ladyfingers"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/ladyfingers"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/ladyfingers"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $13"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/ladyfingers"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 1"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/ladyfingers"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="biscuits" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/biscuits"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "BISCUITS"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/biscuits"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/biscuits"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/biscuits"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $10"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/biscuits"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 500g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/biscuits"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="gelatine" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/gelatine"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "GELATINE"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/gelatine"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/gelatine"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/gelatine"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $1.5"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/gelatine"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 10g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/gelatine"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="fruits" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/fruits"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "FRUITS"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/fruits"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/fruits"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/fruits"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $7.5"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/fruits"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 250g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/fruits"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="bread" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/bread"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "BREAD"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/bread"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/bread"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/bread"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $6"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/bread"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 16"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/bread"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="walnuts" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/walnuts"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "WALNUTS"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/walnuts"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/walnuts"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/walnuts"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $13"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/walnuts"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 200g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/walnuts"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="applesauce" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/applesauce"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "APPLESAUCE"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/applesauce"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/applesauce"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/applesauce"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $30"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/applesauce"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 300g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/applesauce"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="ginger" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/ginger"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "GINGER"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/ginger"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/ginger"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/ginger"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $20"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/ginger"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 15g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/ginger"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="carrots" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/carrots"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "CARROTS"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/carrots"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/carrots"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/carrots"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $2"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/carrots"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 500g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/carrots"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="raisins" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/raisins"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "RAISINS"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/raisins"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/raisins"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/raisins"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $10"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/raisins"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 200g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/raisins"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="coconut" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/coconut"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "COCONUT"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/coconut"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/coconut"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/coconut"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $3"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/coconut"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 70g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/coconut"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="rumessence" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/rumessence"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "RUM
+ESSENCE"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/rumessence"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/rumessence"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/rumessence"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $5"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/rumessence"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 4"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/rumessence"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="molasses" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/molasses"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "MOLASSES"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/molasses"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/molasses"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/molasses"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $75"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/molasses"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 350g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/molasses"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="rahat" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/rahat"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "TURKISH
+DELIGHT"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/rahat"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/rahat"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/rahat"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $5"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/rahat"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 250g"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/rahat"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="vinegar" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/vinegar"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "VINEGAR"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/vinegar"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/vinegar"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/vinegar"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $1"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/vinegar"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 250ml"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/vinegar"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
+[node name="reddye" type="TextureRect" parent="ingredients/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e7rdd")
+
+[node name="ing_name" type="Label" parent="ingredients/VBoxContainer/reddye"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "RED DYE"
+
+[node name="image" type="Sprite2D" parent="ingredients/VBoxContainer/reddye"]
+position = Vector2(129.99998, 106.000015)
+scale = Vector2(0.42031014, 0.42031014)
+texture = ExtResource("7_8kdgp")
+
+[node name="Button" type="Button" parent="ingredients/VBoxContainer/reddye"]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 56.0
+offset_right = 965.0
+offset_bottom = 121.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 35
+text = "Buy"
+
+[node name="price" type="Label" parent="ingredients/VBoxContainer/reddye"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 12.0
+offset_right = 666.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "price: $2.5"
+
+[node name="qty" type="Label" parent="ingredients/VBoxContainer/reddye"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 72.0
+offset_right = 703.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 25
+text = "quantity: 25ml"
+
+[node name="inv" type="Label" parent="ingredients/VBoxContainer/reddye"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 142.0
+offset_right = 675.0
+offset_bottom = 165.0
+text = "inventory:"
+
 [node name="coins" parent="." instance=ExtResource("8_myf4l")]
 offset_top = 20.0
 offset_bottom = 62.0
@@ -1599,3 +2628,22 @@ process_material = SubResource("ParticleProcessMaterial_acxsc")
 [connection signal="pressed" from="ingredients/VBoxContainer/banana/Button" to="ingredients" method="on_banana_pressed"]
 [connection signal="pressed" from="ingredients/VBoxContainer/chocolate/Button" to="ingredients" method="on_chocolate_pressed"]
 [connection signal="pressed" from="ingredients/VBoxContainer/nutmeg/Button" to="ingredients" method="on_nutmeg_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/agaves/Button" to="ingredients" method="on_agaves_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/mascarpone/Button" to="ingredients" method="on_mascarpone_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/espresso/Button" to="ingredients" method="on_espresso_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/ladyfingers/Button" to="ingredients" method="on_ladyfingers_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/biscuits/Button" to="ingredients" method="on_biscuits_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/gelatine/Button" to="ingredients" method="on_gelatine_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/fruits/Button" to="ingredients" method="on_fruits_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/bread/Button" to="ingredients" method="on_bread_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/walnuts/Button" to="ingredients" method="on_walnuts_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/applesauce/Button" to="ingredients" method="on_applesauce_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/ginger/Button" to="ingredients" method="on_ginger_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/carrots/Button" to="ingredients" method="on_carrots_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/raisins/Button" to="ingredients" method="on_raisins_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/coconut/Button" to="ingredients" method="on_coconut_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/rumessence/Button" to="ingredients" method="on_rumessence_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/molasses/Button" to="ingredients" method="on_molasses_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/rahat/Button" to="ingredients" method="on_rahat_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/vinegar/Button" to="ingredients" method="on_vinegar_pressed"]
+[connection signal="pressed" from="ingredients/VBoxContainer/reddye/Button" to="ingredients" method="on_vinegar_pressed"]

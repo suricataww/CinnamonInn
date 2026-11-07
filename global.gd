@@ -145,5 +145,9 @@ var inv_treat1 = 12  #momentan raspunde la cinnamon, should be deleted
 #slider selection signal
 var slider_selec = 0
 
+#position markers in kitchen table - intr-un vector!!
+var mpoz: Array[bool] = [false,false,false,false]
+#o sa am nevoie de mai multe, dar asta cand stabilesc pasii la toate retetele
+
 func _process(delta: float) -> void:
 	await get_tree().create_timer(1).timeout

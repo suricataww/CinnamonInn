@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 	if global.progress_c == 11: 
 		#asta e fals la reteta adevarata dar il las asa saptamana asta pt ca n-am timp sa scriu cod suficient
 		gata = true
-	print(global.progress_c)
 
 func ing_entered(area = Area2D) -> void:
 	#cod de animatie specific pentru gogosi, might change this later sa il fac mai general ca n-am chef sa fac 100 

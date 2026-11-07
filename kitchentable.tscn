@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://borq5pqbmmgdp"]
+[gd_scene load_steps=85 format=3 uid="uid://borq5pqbmmgdp"]
 
 [ext_resource type="Script" uid="uid://yuwsgepkshml" path="res://wsugar.gd" id="1_3nmhd"]
 [ext_resource type="Texture2D" uid="uid://drd8lonn2r732" path="res://init_assets/wsugar.png" id="1_owg2j"]
@@ -12,10 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://d0a6bgnlrn0t" path="res://init_assets/lapteidle.png" id="7_je1yt"]
 [ext_resource type="Script" uid="uid://r5fnqal4wsv8" path="res://yeast.gd" id="8_jiofk"]
 [ext_resource type="Texture2D" uid="uid://bbmh0desvjxw7" path="res://init_assets/image-removebg-preview (42).png" id="10_pf3p3"]
+[ext_resource type="Script" uid="uid://cs3kbyjj5h5g5" path="res://bsugar.gd" id="11_eu6bo"]
 [ext_resource type="Script" uid="uid://dftdm57bhnoy" path="res://egg.gd" id="11_jsioe"]
 [ext_resource type="Script" uid="uid://dtej7k5cpgtmy" path="res://vanilla.gd" id="12_uhevc"]
 [ext_resource type="Texture2D" uid="uid://cgc6wls6xs1df" path="res://init_assets/ou.png" id="12_x426g"]
 [ext_resource type="Texture2D" uid="uid://d2xkjwduvyst7" path="res://init_assets/flour.png" id="13_xy0ns"]
+[ext_resource type="Script" uid="uid://37x8fyt6k64q" path="res://cinnamonp.gd" id="14_2i5s8"]
 [ext_resource type="Texture2D" uid="uid://beimvdwpp0boj" path="res://init_assets/image-removebg-preview (41).png" id="14_h4lmt"]
 [ext_resource type="Script" uid="uid://bglu1scqxg4ol" path="res://flour.gd" id="14_tw3j7"]
 [ext_resource type="Script" uid="uid://cekmpyy05mf6s" path="res://salt.gd" id="15_3v5dp"]
@@ -23,6 +25,27 @@
 [ext_resource type="Texture2D" uid="uid://drdojoxoet4it" path="res://init_assets/butter.png" id="16_uhevc"]
 [ext_resource type="Texture2D" uid="uid://dqa6auir3aaic" path="res://init_assets/image-removebg-preview (40).png" id="18_83cp1"]
 [ext_resource type="Script" uid="uid://dmdbagxocxejc" path="res://v_box_container.gd" id="22_h4lmt"]
+[ext_resource type="Script" uid="uid://dcuwqr85b1xli" path="res://creamcheese.gd" id="23_1xehk"]
+[ext_resource type="Script" uid="uid://2qve6dvf1nqa" path="res://hwhipcream.gd" id="24_sqcyp"]
+[ext_resource type="Script" uid="uid://obfstrvtrwy0" path="res://water.gd" id="25_2i5s8"]
+[ext_resource type="Script" uid="uid://0wvlnlkeh4xd" path="res://cocoa.gd" id="26_1xehk"]
+[ext_resource type="Script" uid="uid://hdhmnipn3886" path="res://oil.gd" id="28_o8xfb"]
+[ext_resource type="Script" uid="uid://dhachn87e7wfu" path="res://cowcheese.gd" id="30_y1df1"]
+[ext_resource type="Script" uid="uid://dot4nh8klyfqw" path="res://lemon.gd" id="31_282r4"]
+[ext_resource type="Script" uid="uid://ce8h0bmnj3yn6" path="res://sourcream.gd" id="32_g044k"]
+[ext_resource type="Script" uid="uid://dsw11sxt74670" path="res://jam.gd" id="33_0vutc"]
+[ext_resource type="Script" uid="uid://c0jkqys08v1kf" path="res://chocolate.gd" id="34_0vutc"]
+[ext_resource type="Script" uid="uid://cc61kojgqn1sk" path="res://nutmeg.gd" id="35_bw3f0"]
+[ext_resource type="Script" uid="uid://cttl5mugiviym" path="res://agaves.gd" id="36_4y82h"]
+[ext_resource type="Script" uid="uid://rahponr878pa" path="res://mascarpone.gd" id="37_fijq5"]
+[ext_resource type="Script" uid="uid://b8v678nohsoqv" path="res://espresso.gd" id="38_mefd8"]
+[ext_resource type="Script" uid="uid://coa0kg8k8jpc" path="res://ladyfingers.gd" id="39_4fafj"]
+[ext_resource type="Script" uid="uid://wh5uqy7sxwx1" path="res://biscuits.gd" id="40_f1bd7"]
+[ext_resource type="Script" uid="uid://cd2wd1hlbyror" path="res://gelatine.gd" id="41_x348b"]
+[ext_resource type="Script" uid="uid://bnrv3mjdkhuo5" path="res://fruits.gd" id="42_j1710"]
+[ext_resource type="Script" uid="uid://b1sdgr8tel12a" path="res://bread.gd" id="43_bjok2"]
+[ext_resource type="Script" uid="uid://dg86vxlqhkm3k" path="res://walnuts.gd" id="44_ju1q2"]
+[ext_resource type="Script" uid="uid://bm83f80yyuldr" path="res://applesauce.gd" id="45_nfup2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_je1yt"]
 animations = [{
@@ -45,6 +68,20 @@ animations = [{
 radius = 67.01349
 height = 266.0193
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_pf3p3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_xy0ns")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x426g"]
+size = Vector2(194.66667, 325.33337)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_owg2j"]
 animations = [{
 "frames": [{
@@ -58,6 +95,22 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xy0ns"]
 size = Vector2(532.0313, 320.20563)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xehk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xy0ns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_uhevc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tw3j7"]
+size = Vector2(344.96176, 152.35803)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_th8nq"]
 animations = [{
@@ -74,20 +127,6 @@ animations = [{
 radius = 54.81241
 height = 258.2516
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4qwgm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_pf3p3")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jsioe"]
-size = Vector2(129.14482, 102.50656)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_tw3j7"]
 animations = [{
 "frames": [{
@@ -103,33 +142,19 @@ animations = [{
 radius = 62.933716
 height = 131.21509
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_b2ppu"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_4qwgm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_h4lmt")
+"texture": ExtResource("10_pf3p3")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf3p3"]
-size = Vector2(127.64316, 159.56445)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pf3p3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_xy0ns")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x426g"]
-size = Vector2(194.66667, 325.33337)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jsioe"]
+size = Vector2(129.14482, 102.50656)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x426g"]
 animations = [{
@@ -145,19 +170,25 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h4lmt"]
 size = Vector2(120.416016, 181.03851)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xy0ns"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_b2ppu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("16_uhevc")
+"texture": ExtResource("14_h4lmt")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tw3j7"]
-size = Vector2(344.96176, 152.35803)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf3p3"]
+size = Vector2(127.64316, 159.56445)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8xfb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqfyf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnv2e"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pf3p3"]
 
@@ -223,6 +254,18 @@ position = Vector2(3, 8)
 rotation = 1.5673125
 shape = SubResource("CapsuleShape2D_effw3")
 
+[node name="flour" type="AnimatedSprite2D" parent="."]
+position = Vector2(420, 318)
+scale = Vector2(0.375, 0.375)
+sprite_frames = SubResource("SpriteFrames_pf3p3")
+script = ExtResource("14_tw3j7")
+
+[node name="Area2D" type="Area2D" parent="flour"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flour/Area2D"]
+position = Vector2(14.6666565, -13.333374)
+shape = SubResource("RectangleShape2D_x426g")
+
 [node name="wsugar" type="AnimatedSprite2D" parent="."]
 position = Vector2(451, 332)
 scale = Vector2(0.18717946, 0.18879335)
@@ -236,6 +279,26 @@ position = Vector2(16.19873, 14.7146)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xy0ns")
 
+[node name="bsugar" type="AnimatedSprite2D" parent="."]
+script = ExtResource("11_eu6bo")
+
+[node name="Area2D" type="Area2D" parent="bsugar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bsugar/Area2D"]
+shape = SubResource("RectangleShape2D_1xehk")
+
+[node name="butter" type="AnimatedSprite2D" parent="."]
+position = Vector2(678.00006, 391)
+scale = Vector2(0.3478647, 0.34786472)
+sprite_frames = SubResource("SpriteFrames_xy0ns")
+script = ExtResource("16_b2ppu")
+
+[node name="Area2D" type="Area2D" parent="butter"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="butter/Area2D"]
+position = Vector2(11.498718, -64.68042)
+shape = SubResource("RectangleShape2D_tw3j7")
+
 [node name="milk" type="AnimatedSprite2D" parent="."]
 position = Vector2(217, 356)
 scale = Vector2(0.4702836, 0.47433844)
@@ -247,19 +310,6 @@ script = ExtResource("7_1e0qk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="milk/Area2D"]
 rotation = -0.0027370453
 shape = SubResource("CapsuleShape2D_5ipad")
-
-[node name="yeast" type="AnimatedSprite2D" parent="."]
-position = Vector2(766.0115, 394.842)
-scale = Vector2(0.6033645, 0.6085667)
-sprite_frames = SubResource("SpriteFrames_4qwgm")
-script = ExtResource("8_jiofk")
-
-[node name="Area2D" type="Area2D" parent="yeast"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="yeast/Area2D"]
-position = Vector2(-9.963253, 6.83243)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_jsioe")
 
 [node name="egg" type="AnimatedSprite2D" parent="."]
 position = Vector2(521, 346)
@@ -274,30 +324,18 @@ position = Vector2(-5.0347004, -2.5173502)
 rotation = -1.5937793
 shape = SubResource("CapsuleShape2D_3v5dp")
 
-[node name="vanilla" type="AnimatedSprite2D" parent="."]
-position = Vector2(310.6607, 326.9316)
-scale = Vector2(0.40926248, 0.40926254)
-sprite_frames = SubResource("SpriteFrames_b2ppu")
-script = ExtResource("12_uhevc")
+[node name="yeast" type="AnimatedSprite2D" parent="."]
+position = Vector2(766.0115, 394.842)
+scale = Vector2(0.6033645, 0.6085667)
+sprite_frames = SubResource("SpriteFrames_4qwgm")
+script = ExtResource("8_jiofk")
 
-[node name="Area2D" type="Area2D" parent="vanilla"]
+[node name="Area2D" type="Area2D" parent="yeast"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="vanilla/Area2D"]
-position = Vector2(5.7158976, 5.053953)
-scale = Vector2(1, 0.9999999)
-shape = SubResource("RectangleShape2D_pf3p3")
-
-[node name="flour" type="AnimatedSprite2D" parent="."]
-position = Vector2(420, 318)
-scale = Vector2(0.375, 0.375)
-sprite_frames = SubResource("SpriteFrames_pf3p3")
-script = ExtResource("14_tw3j7")
-
-[node name="Area2D" type="Area2D" parent="flour"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="flour/Area2D"]
-position = Vector2(14.6666565, -13.333374)
-shape = SubResource("RectangleShape2D_x426g")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="yeast/Area2D"]
+position = Vector2(-9.963253, 6.83243)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_jsioe")
 
 [node name="salt" type="AnimatedSprite2D" parent="."]
 position = Vector2(953.07935, 394.5613)
@@ -312,23 +350,193 @@ position = Vector2(24.229927, -9.673065)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_h4lmt")
 
-[node name="butter" type="AnimatedSprite2D" parent="."]
-position = Vector2(678.00006, 391)
-scale = Vector2(0.3478647, 0.34786472)
-sprite_frames = SubResource("SpriteFrames_xy0ns")
-script = ExtResource("16_b2ppu")
+[node name="creamcheese" type="AnimatedSprite2D" parent="."]
+script = ExtResource("23_1xehk")
 
-[node name="Area2D" type="Area2D" parent="butter"]
+[node name="Area2D" type="Area2D" parent="creamcheese"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="butter/Area2D"]
-position = Vector2(11.498718, -64.68042)
-shape = SubResource("RectangleShape2D_tw3j7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="creamcheese/Area2D"]
+
+[node name="vanilla" type="AnimatedSprite2D" parent="."]
+position = Vector2(310.6607, 326.9316)
+scale = Vector2(0.40926248, 0.40926254)
+sprite_frames = SubResource("SpriteFrames_b2ppu")
+script = ExtResource("12_uhevc")
+
+[node name="Area2D" type="Area2D" parent="vanilla"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="vanilla/Area2D"]
+position = Vector2(5.7158976, 5.053953)
+scale = Vector2(1, 0.9999999)
+shape = SubResource("RectangleShape2D_pf3p3")
+
+[node name="cinnamonp" type="AnimatedSprite2D" parent="."]
+script = ExtResource("14_2i5s8")
+
+[node name="Area2D" type="Area2D" parent="cinnamonp"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cinnamonp/Area2D"]
+shape = SubResource("RectangleShape2D_o8xfb")
+
+[node name="cocoa" type="AnimatedSprite2D" parent="."]
+script = ExtResource("26_1xehk")
+
+[node name="hwhipcream" type="AnimatedSprite2D" parent="."]
+script = ExtResource("24_sqcyp")
+
+[node name="Area2D" type="Area2D" parent="hwhipcream"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hwhipcream/Area2D"]
+position = Vector2(79, 127)
+shape = SubResource("RectangleShape2D_iqfyf")
+
+[node name="oil" type="AnimatedSprite2D" parent="."]
+script = ExtResource("28_o8xfb")
+
+[node name="water" type="AnimatedSprite2D" parent="."]
+script = ExtResource("25_2i5s8")
+
+[node name="Area2D" type="Area2D" parent="water"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="water/Area2D"]
+position = Vector2(202, 63)
+shape = SubResource("RectangleShape2D_nnv2e")
+
+[node name="cowcheese" type="AnimatedSprite2D" parent="."]
+script = ExtResource("30_y1df1")
+
+[node name="Area2D" type="Area2D" parent="cowcheese"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cowcheese/Area2D"]
+
+[node name="lemon" type="AnimatedSprite2D" parent="."]
+script = ExtResource("31_282r4")
+
+[node name="Area2D" type="Area2D" parent="lemon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lemon/Area2D"]
+
+[node name="sourcream" type="AnimatedSprite2D" parent="."]
+script = ExtResource("32_g044k")
+
+[node name="Area2D" type="Area2D" parent="sourcream"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sourcream/Area2D"]
+
+[node name="jam" type="AnimatedSprite2D" parent="."]
+script = ExtResource("33_0vutc")
+
+[node name="Area2D" type="Area2D" parent="jam"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jam/Area2D"]
+
+[node name="chocolate" type="AnimatedSprite2D" parent="."]
+script = ExtResource("34_0vutc")
+
+[node name="Area2D" type="Area2D" parent="chocolate"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chocolate/Area2D"]
+
+[node name="nutmeg" type="AnimatedSprite2D" parent="."]
+script = ExtResource("35_bw3f0")
+
+[node name="Area2D" type="Area2D" parent="nutmeg"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nutmeg/Area2D"]
+
+[node name="agaves" type="AnimatedSprite2D" parent="."]
+script = ExtResource("36_4y82h")
+
+[node name="Area2D" type="Area2D" parent="agaves"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="agaves/Area2D"]
+
+[node name="mascarpone" type="AnimatedSprite2D" parent="."]
+script = ExtResource("37_fijq5")
+
+[node name="Area2D" type="Area2D" parent="mascarpone"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mascarpone/Area2D"]
+
+[node name="espresso" type="AnimatedSprite2D" parent="."]
+script = ExtResource("38_mefd8")
+
+[node name="Area2D" type="Area2D" parent="espresso"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="espresso/Area2D"]
+
+[node name="ladyfingers" type="AnimatedSprite2D" parent="."]
+script = ExtResource("39_4fafj")
+
+[node name="Area2D" type="Area2D" parent="ladyfingers"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ladyfingers/Area2D"]
+
+[node name="biscuits" type="AnimatedSprite2D" parent="."]
+script = ExtResource("40_f1bd7")
+
+[node name="Area2D" type="Area2D" parent="biscuits"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="biscuits/Area2D"]
+
+[node name="gelatine" type="AnimatedSprite2D" parent="."]
+script = ExtResource("41_x348b")
+
+[node name="Area2D" type="Area2D" parent="gelatine"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gelatine/Area2D"]
+
+[node name="fruits" type="AnimatedSprite2D" parent="."]
+script = ExtResource("42_j1710")
+
+[node name="Area2D" type="Area2D" parent="fruits"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fruits/Area2D"]
+
+[node name="bread" type="AnimatedSprite2D" parent="."]
+script = ExtResource("43_bjok2")
+
+[node name="Area2D" type="Area2D" parent="bread"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bread/Area2D"]
+
+[node name="walnuts" type="AnimatedSprite2D" parent="."]
+script = ExtResource("44_ju1q2")
+
+[node name="Area2D" type="Area2D" parent="walnuts"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walnuts/Area2D"]
+
+[node name="applesauce" type="AnimatedSprite2D" parent="."]
+script = ExtResource("45_nfup2")
+
+[node name="Area2D" type="Area2D" parent="applesauce"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="applesauce/Area2D"]
+
+[node name="ginger" type="AnimatedSprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="ginger"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ginger/Area2D"]
+
+[node name="carrots" type="AnimatedSprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="carrots"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="carrots/Area2D"]
+
+[node name="raisins" type="AnimatedSprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="raisins"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="raisins/Area2D"]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 588.0
 offset_top = 29.0
-offset_right = 825.0
-offset_bottom = 286.0
+offset_right = 829.0
+offset_bottom = 295.0
 size_flags_horizontal = 0
 script = ExtResource("22_h4lmt")
 
@@ -541,3 +749,15 @@ show_percentage = false
 [node name="Label10" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "*press on  the bowl - and done!"
+
+[node name="mpoz1" type="Marker2D" parent="."]
+position = Vector2(180, 427)
+
+[node name="mpoz2" type="Marker2D" parent="."]
+position = Vector2(278, 288)
+
+[node name="mpoz3" type="Marker2D" parent="."]
+position = Vector2(419, 247)
+
+[node name="mpoz4" type="Marker2D" parent="."]
+position = Vector2(851, 433)

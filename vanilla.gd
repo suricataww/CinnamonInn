@@ -1,7 +1,16 @@
 extends AnimatedSprite2D
 @onready var vanilla: Area2D = $Area2D
+
+@onready var m1: Marker2D = $"../mpoz1"
+@onready var m2: Marker2D = $"../mpoz2"
+@onready var m3: Marker2D = $"../mpoz3"
+@onready var m4: Marker2D = $"../mpoz4"
+var markers: Array[Marker2D] = []
+
 var permis: bool = false
+var posit 
 var step_needed = 0
+var asezat: bool = false
 
 func _ready() -> void:
 	if global.dish_selection == 1:
@@ -10,6 +19,18 @@ func _ready() -> void:
 	vanilla.input_event.connect(mouse)
 	position = Vector2(294,310)
 	add_to_group("vanilla")
+
+func pos_assign() -> void:
+	var k = 0
+	markers = [m1, m2, m3, m4]
+	while asezat == false:
+		if global.mpoz[k] == false:
+			global.mpoz[k] = true
+			$".".global_position = markers[k].global_position
+			asezat = true
+		else:
+			k += 1
+	posit = position
 
 func _process(delta: float) -> void:
 	if permis == true:
@@ -33,5 +54,5 @@ func bowl_entered(area: Area2D) -> void:
 		position = Vector2(453,347)
 		frame = 1
 		await get_tree().create_timer(0.6).timeout
-		position = Vector2(294,310)
+		position = posit
 		global.progress_c += 1

@@ -1,10 +1,10 @@
 extends AnimatedSprite2D
 @onready var rahat: Area2D = $Area2D
 
-@onready var m1: Marker2D = $"../mpoz1"
-@onready var m2: Marker2D = $"../mpoz2"
-@onready var m3: Marker2D = $"../mpoz3"
-@onready var m4: Marker2D = $"../mpoz4"
+@onready var m1: Marker2D = $"../../mpoz1"
+@onready var m2: Marker2D = $"../../mpoz2"
+@onready var m3: Marker2D = $"../../mpoz3"
+@onready var m4: Marker2D = $"../../mpoz4"
 var markers: Array[Marker2D] = []
 
 var permis: bool = false
@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 			modulate.a = 1
 			$".".visible = true
 		else:
-			mdoulate.a = 0
+			modulate.a = 0
 			$".".visible = false
 
 func mouse(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -52,6 +52,6 @@ func bowl_entered(area: Area2D) -> void:
 		#animation
 		position = Vector2(678,391)
 		frame = 1
-		awair get_tree().create_timer(0.6).timeout
+		await get_tree().create_timer(0.6).timeout
 		position = posit
 		global.progress_c += 1

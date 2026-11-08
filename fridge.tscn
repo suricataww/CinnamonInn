@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://dj61cnog0lgok"]
+
+[ext_resource type="Script" uid="uid://y1sfw0e8cfns" path="res://fridge.gd" id="1_085p4"]
+[ext_resource type="PackedScene" uid="uid://c60rtngcsr4a6" path="res://timer_k2.tscn" id="2_6ofhc"]
+[ext_resource type="Script" uid="uid://dbw4rtsr8jwgv" path="res://dish.gd" id="2_e6sfw"]
+[ext_resource type="Texture2D" uid="uid://bkj0860v23tug" path="res://init_assets/image-removebg-preview (52.png" id="2_gk71u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gk71u"]
+size = Vector2(346, 123)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ofhc"]
+size = Vector2(339.45642, 75.72247)
+
+[node name="fridge" type="Node2D"]
+script = ExtResource("1_085p4")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(610, 355)
+shape = SubResource("RectangleShape2D_gk71u")
+
+[node name="timer" parent="." instance=ExtResource("2_6ofhc")]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="dish" type="Sprite2D" parent="."]
+position = Vector2(608, 531)
+scale = Vector2(0.6566265, 0.6566265)
+texture = ExtResource("2_gk71u")
+script = ExtResource("2_e6sfw")
+
+[node name="Area2D" type="Area2D" parent="dish"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dish/Area2D"]
+position = Vector2(0.48739624, -2.45298)
+shape = SubResource("RectangleShape2D_6ofhc")
+debug_color = Color(0.8078077, 0.24648374, 0.8243607, 0.41960785)
+
+[connection signal="area_entered" from="dish/Area2D" to="dish" method="_on_area_2d_area_entered"]

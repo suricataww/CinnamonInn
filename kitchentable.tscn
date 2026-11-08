@@ -263,328 +263,334 @@ position = Vector2(3, 8)
 rotation = 1.5673125
 shape = SubResource("CapsuleShape2D_effw3")
 
-[node name="flour" type="AnimatedSprite2D" parent="."]
+[node name="ingredients" type="Node" parent="."]
+
+[node name="flour" type="AnimatedSprite2D" parent="ingredients"]
 position = Vector2(420, 318)
 scale = Vector2(0.375, 0.375)
 sprite_frames = SubResource("SpriteFrames_pf3p3")
 script = ExtResource("14_tw3j7")
 
-[node name="Area2D" type="Area2D" parent="flour"]
+[node name="Area2D" type="Area2D" parent="ingredients/flour"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="flour/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/flour/Area2D"]
 position = Vector2(14.6666565, -13.333374)
 shape = SubResource("RectangleShape2D_x426g")
 
-[node name="wsugar" type="AnimatedSprite2D" parent="."]
+[node name="wsugar" type="AnimatedSprite2D" parent="ingredients"]
 position = Vector2(451, 332)
 scale = Vector2(0.18717946, 0.18879335)
 sprite_frames = SubResource("SpriteFrames_owg2j")
 script = ExtResource("1_3nmhd")
 
-[node name="Area2D" type="Area2D" parent="wsugar"]
+[node name="Area2D" type="Area2D" parent="ingredients/wsugar"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wsugar/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/wsugar/Area2D"]
 position = Vector2(16.19873, 14.7146)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xy0ns")
 
-[node name="bsugar" type="AnimatedSprite2D" parent="."]
+[node name="bsugar" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("11_eu6bo")
 
-[node name="Area2D" type="Area2D" parent="bsugar"]
+[node name="Area2D" type="Area2D" parent="ingredients/bsugar"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bsugar/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/bsugar/Area2D"]
 shape = SubResource("RectangleShape2D_1xehk")
 
-[node name="butter" type="AnimatedSprite2D" parent="."]
+[node name="butter" type="AnimatedSprite2D" parent="ingredients"]
 position = Vector2(678.00006, 391)
 scale = Vector2(0.3478647, 0.34786472)
 sprite_frames = SubResource("SpriteFrames_xy0ns")
 script = ExtResource("16_b2ppu")
 
-[node name="Area2D" type="Area2D" parent="butter"]
+[node name="Area2D" type="Area2D" parent="ingredients/butter"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="butter/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/butter/Area2D"]
 position = Vector2(11.498718, -64.68042)
 shape = SubResource("RectangleShape2D_tw3j7")
 
-[node name="milk" type="AnimatedSprite2D" parent="."]
+[node name="milk" type="AnimatedSprite2D" parent="ingredients"]
 position = Vector2(217, 356)
 scale = Vector2(0.4702836, 0.47433844)
 sprite_frames = SubResource("SpriteFrames_th8nq")
 script = ExtResource("7_1e0qk")
 
-[node name="Area2D" type="Area2D" parent="milk"]
+[node name="Area2D" type="Area2D" parent="ingredients/milk"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="milk/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/milk/Area2D"]
 rotation = -0.0027370453
 shape = SubResource("CapsuleShape2D_5ipad")
 
-[node name="egg" type="AnimatedSprite2D" parent="."]
+[node name="egg" type="AnimatedSprite2D" parent="ingredients"]
 position = Vector2(521, 346)
 scale = Vector2(0.39724308, 0.3972431)
 sprite_frames = SubResource("SpriteFrames_tw3j7")
 script = ExtResource("11_jsioe")
 
-[node name="Area2D" type="Area2D" parent="egg"]
+[node name="Area2D" type="Area2D" parent="ingredients/egg"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="egg/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/egg/Area2D"]
 position = Vector2(-5.0347004, -2.5173502)
 rotation = -1.5937793
 shape = SubResource("CapsuleShape2D_3v5dp")
 
-[node name="yeast" type="AnimatedSprite2D" parent="."]
+[node name="yeast" type="AnimatedSprite2D" parent="ingredients"]
 position = Vector2(766.0115, 394.842)
 scale = Vector2(0.6033645, 0.6085667)
 sprite_frames = SubResource("SpriteFrames_4qwgm")
 script = ExtResource("8_jiofk")
 
-[node name="Area2D" type="Area2D" parent="yeast"]
+[node name="Area2D" type="Area2D" parent="ingredients/yeast"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="yeast/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/yeast/Area2D"]
 position = Vector2(-9.963253, 6.83243)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_jsioe")
 
-[node name="salt" type="AnimatedSprite2D" parent="."]
+[node name="salt" type="AnimatedSprite2D" parent="ingredients"]
 position = Vector2(953.07935, 394.5613)
 scale = Vector2(0.36816573, 0.36816573)
 sprite_frames = SubResource("SpriteFrames_x426g")
 script = ExtResource("15_3v5dp")
 
-[node name="Area2D" type="Area2D" parent="salt"]
+[node name="Area2D" type="Area2D" parent="ingredients/salt"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="salt/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/salt/Area2D"]
 position = Vector2(24.229927, -9.673065)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_h4lmt")
 
-[node name="creamcheese" type="AnimatedSprite2D" parent="."]
+[node name="creamcheese" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("23_1xehk")
 
-[node name="Area2D" type="Area2D" parent="creamcheese"]
+[node name="Area2D" type="Area2D" parent="ingredients/creamcheese"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="creamcheese/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/creamcheese/Area2D"]
 
-[node name="vanilla" type="AnimatedSprite2D" parent="."]
+[node name="vanilla" type="AnimatedSprite2D" parent="ingredients"]
 position = Vector2(310.6607, 326.9316)
 scale = Vector2(0.40926248, 0.40926254)
 sprite_frames = SubResource("SpriteFrames_b2ppu")
 script = ExtResource("12_uhevc")
 
-[node name="Area2D" type="Area2D" parent="vanilla"]
+[node name="Area2D" type="Area2D" parent="ingredients/vanilla"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="vanilla/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/vanilla/Area2D"]
 position = Vector2(5.7158976, 5.053953)
 scale = Vector2(1, 0.9999999)
 shape = SubResource("RectangleShape2D_pf3p3")
 
-[node name="cinnamonp" type="AnimatedSprite2D" parent="."]
+[node name="cinnamonp" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("14_2i5s8")
 
-[node name="Area2D" type="Area2D" parent="cinnamonp"]
+[node name="Area2D" type="Area2D" parent="ingredients/cinnamonp"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cinnamonp/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/cinnamonp/Area2D"]
 shape = SubResource("RectangleShape2D_o8xfb")
 
-[node name="cocoa" type="AnimatedSprite2D" parent="."]
+[node name="cocoa" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("26_1xehk")
 
-[node name="hwhipcream" type="AnimatedSprite2D" parent="."]
+[node name="hwhipcream" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("24_sqcyp")
 
-[node name="Area2D" type="Area2D" parent="hwhipcream"]
+[node name="Area2D" type="Area2D" parent="ingredients/hwhipcream"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hwhipcream/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/hwhipcream/Area2D"]
 position = Vector2(79, 127)
 shape = SubResource("RectangleShape2D_iqfyf")
 
-[node name="oil" type="AnimatedSprite2D" parent="."]
+[node name="oil" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("28_o8xfb")
 
-[node name="water" type="AnimatedSprite2D" parent="."]
+[node name="Area2D" type="Area2D" parent="ingredients/oil"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/oil/Area2D"]
+
+[node name="water" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("25_2i5s8")
 
-[node name="Area2D" type="Area2D" parent="water"]
+[node name="Area2D" type="Area2D" parent="ingredients/water"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="water/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/water/Area2D"]
 position = Vector2(202, 63)
 shape = SubResource("RectangleShape2D_nnv2e")
 
-[node name="cowcheese" type="AnimatedSprite2D" parent="."]
+[node name="cowcheese" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("30_y1df1")
 
-[node name="Area2D" type="Area2D" parent="cowcheese"]
+[node name="Area2D" type="Area2D" parent="ingredients/cowcheese"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cowcheese/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/cowcheese/Area2D"]
 
-[node name="lemon" type="AnimatedSprite2D" parent="."]
+[node name="lemon" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("31_282r4")
 
-[node name="Area2D" type="Area2D" parent="lemon"]
+[node name="Area2D" type="Area2D" parent="ingredients/lemon"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="lemon/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/lemon/Area2D"]
 
-[node name="sourcream" type="AnimatedSprite2D" parent="."]
+[node name="sourcream" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("32_g044k")
 
-[node name="Area2D" type="Area2D" parent="sourcream"]
+[node name="Area2D" type="Area2D" parent="ingredients/sourcream"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sourcream/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/sourcream/Area2D"]
 
-[node name="jam" type="AnimatedSprite2D" parent="."]
+[node name="jam" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("33_0vutc")
 
-[node name="Area2D" type="Area2D" parent="jam"]
+[node name="Area2D" type="Area2D" parent="ingredients/jam"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="jam/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/jam/Area2D"]
 
-[node name="chocolate" type="AnimatedSprite2D" parent="."]
+[node name="chocolate" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("34_0vutc")
 
-[node name="Area2D" type="Area2D" parent="chocolate"]
+[node name="Area2D" type="Area2D" parent="ingredients/chocolate"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="chocolate/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/chocolate/Area2D"]
 
-[node name="nutmeg" type="AnimatedSprite2D" parent="."]
+[node name="nutmeg" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("35_bw3f0")
 
-[node name="Area2D" type="Area2D" parent="nutmeg"]
+[node name="Area2D" type="Area2D" parent="ingredients/nutmeg"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="nutmeg/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/nutmeg/Area2D"]
 
-[node name="agaves" type="AnimatedSprite2D" parent="."]
+[node name="agaves" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("36_4y82h")
 
-[node name="Area2D" type="Area2D" parent="agaves"]
+[node name="Area2D" type="Area2D" parent="ingredients/agaves"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="agaves/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/agaves/Area2D"]
 
-[node name="mascarpone" type="AnimatedSprite2D" parent="."]
+[node name="mascarpone" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("37_fijq5")
 
-[node name="Area2D" type="Area2D" parent="mascarpone"]
+[node name="Area2D" type="Area2D" parent="ingredients/mascarpone"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mascarpone/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/mascarpone/Area2D"]
 
-[node name="espresso" type="AnimatedSprite2D" parent="."]
+[node name="espresso" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("38_mefd8")
 
-[node name="Area2D" type="Area2D" parent="espresso"]
+[node name="Area2D" type="Area2D" parent="ingredients/espresso"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="espresso/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/espresso/Area2D"]
 
-[node name="ladyfingers" type="AnimatedSprite2D" parent="."]
+[node name="ladyfingers" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("39_4fafj")
 
-[node name="Area2D" type="Area2D" parent="ladyfingers"]
+[node name="Area2D" type="Area2D" parent="ingredients/ladyfingers"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ladyfingers/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/ladyfingers/Area2D"]
 
-[node name="biscuits" type="AnimatedSprite2D" parent="."]
+[node name="biscuits" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("40_f1bd7")
 
-[node name="Area2D" type="Area2D" parent="biscuits"]
+[node name="Area2D" type="Area2D" parent="ingredients/biscuits"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="biscuits/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/biscuits/Area2D"]
 
-[node name="gelatine" type="AnimatedSprite2D" parent="."]
+[node name="gelatine" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("41_x348b")
 
-[node name="Area2D" type="Area2D" parent="gelatine"]
+[node name="Area2D" type="Area2D" parent="ingredients/gelatine"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="gelatine/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/gelatine/Area2D"]
 
-[node name="fruits" type="AnimatedSprite2D" parent="."]
+[node name="fruits" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("42_j1710")
 
-[node name="Area2D" type="Area2D" parent="fruits"]
+[node name="Area2D" type="Area2D" parent="ingredients/fruits"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fruits/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/fruits/Area2D"]
 
-[node name="bread" type="AnimatedSprite2D" parent="."]
+[node name="bread" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("43_bjok2")
 
-[node name="Area2D" type="Area2D" parent="bread"]
+[node name="Area2D" type="Area2D" parent="ingredients/bread"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bread/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/bread/Area2D"]
 
-[node name="walnuts" type="AnimatedSprite2D" parent="."]
+[node name="walnuts" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("44_ju1q2")
 
-[node name="Area2D" type="Area2D" parent="walnuts"]
+[node name="Area2D" type="Area2D" parent="ingredients/walnuts"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="walnuts/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/walnuts/Area2D"]
 
-[node name="applesauce" type="AnimatedSprite2D" parent="."]
+[node name="applesauce" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("45_nfup2")
 
-[node name="Area2D" type="Area2D" parent="applesauce"]
+[node name="Area2D" type="Area2D" parent="ingredients/applesauce"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="applesauce/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/applesauce/Area2D"]
 
-[node name="ginger" type="AnimatedSprite2D" parent="."]
+[node name="ginger" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("46_gonjj")
 
-[node name="Area2D" type="Area2D" parent="ginger"]
+[node name="Area2D" type="Area2D" parent="ingredients/ginger"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ginger/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/ginger/Area2D"]
 
-[node name="carrots" type="AnimatedSprite2D" parent="."]
+[node name="carrots" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("47_iuyvy")
 
-[node name="Area2D" type="Area2D" parent="carrots"]
+[node name="Area2D" type="Area2D" parent="ingredients/carrots"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="carrots/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/carrots/Area2D"]
 
-[node name="raisins" type="AnimatedSprite2D" parent="."]
+[node name="raisins" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("48_1pc5d")
 
-[node name="Area2D" type="Area2D" parent="raisins"]
+[node name="Area2D" type="Area2D" parent="ingredients/raisins"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="raisins/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/raisins/Area2D"]
 
-[node name="coconut" type="AnimatedSprite2D" parent="."]
+[node name="coconut" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("49_8ilor")
 
-[node name="Area2D" type="Area2D" parent="coconut"]
+[node name="Area2D" type="Area2D" parent="ingredients/coconut"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coconut/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/coconut/Area2D"]
 
-[node name="rumessence" type="AnimatedSprite2D" parent="."]
+[node name="rumessence" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("50_7og87")
 
-[node name="Area2D" type="Area2D" parent="rumessence"]
+[node name="Area2D" type="Area2D" parent="ingredients/rumessence"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rumessence/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/rumessence/Area2D"]
 
-[node name="molasses" type="AnimatedSprite2D" parent="."]
+[node name="molasses" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("51_dac33")
 
-[node name="Area2D" type="Area2D" parent="molasses"]
+[node name="Area2D" type="Area2D" parent="ingredients/molasses"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="molasses/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/molasses/Area2D"]
 
-[node name="rahat" type="AnimatedSprite2D" parent="."]
+[node name="rahat" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("52_t54c3")
 
-[node name="Area2D" type="Area2D" parent="rahat"]
+[node name="Area2D" type="Area2D" parent="ingredients/rahat"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rahat/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/rahat/Area2D"]
 
-[node name="vinegar" type="AnimatedSprite2D" parent="."]
+[node name="vinegar" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("53_48483")
 
-[node name="Area2D" type="Area2D" parent="vinegar"]
+[node name="Area2D" type="Area2D" parent="ingredients/vinegar"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="vinegar/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/vinegar/Area2D"]
 
-[node name="reddye" type="AnimatedSprite2D" parent="."]
+[node name="reddye" type="AnimatedSprite2D" parent="ingredients"]
 script = ExtResource("54_0rbsv")
 
-[node name="Area2D" type="Area2D" parent="reddye"]
+[node name="Area2D" type="Area2D" parent="ingredients/reddye"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="reddye/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ingredients/reddye/Area2D"]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 588.0
@@ -815,3 +821,12 @@ position = Vector2(419, 247)
 
 [node name="mpoz4" type="Marker2D" parent="."]
 position = Vector2(851, 433)
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 980.0
+offset_top = 516.0
+offset_right = 1105.0
+offset_bottom = 613.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

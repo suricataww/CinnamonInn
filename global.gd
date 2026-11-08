@@ -145,6 +145,9 @@ var inv_treat1 = 12  #momentan raspunde la cinnamon, should be deleted
 #slider selection signal
 var slider_selec = 0
 
+#pentru scenele din kitchen2 in care am un timer care se scurge si am nevoie sa il folosesc ca semnal
+var timer_prog: bool = false
+
 #position markers in kitchen table - intr-un vector!!
 var mpoz: Array[bool] = [false,false,false,false]
 #o sa am nevoie de mai multe, dar asta cand stabilesc pasii la toate retetele

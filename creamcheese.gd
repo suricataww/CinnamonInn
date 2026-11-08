@@ -2,10 +2,10 @@ extends AnimatedSprite2D
 
 @onready var creamcheese: Area2D = $Area2D
 
-@onready var m1: Marker2D = $"../mpoz1"
-@onready var m2: Marker2D = $"../mpoz2"
-@onready var m3: Marker2D = $"../mpoz3"
-@onready var m4: Marker2D = $"../mpoz4"
+@onready var m1: Marker2D = $"../../mpoz1"
+@onready var m2: Marker2D = $"../../mpoz2"
+@onready var m3: Marker2D = $"../../mpoz3"
+@onready var m4: Marker2D = $"../../mpoz4"
 var markers: Array[Marker2D] = []
 
 var permis: bool = false

@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5mwbfqdccqc7"]
+
+[ext_resource type="Script" uid="uid://1yh6s3ee0l73" path="res://stove.gd" id="1_3fsnh"]
+[ext_resource type="Script" uid="uid://dbw4rtsr8jwgv" path="res://dish.gd" id="2_a3bkh"]
+[ext_resource type="Texture2D" uid="uid://bkj0860v23tug" path="res://init_assets/image-removebg-preview (52.png" id="2_eim6s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v45k4"]
+size = Vector2(923, 265)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbb0h"]
+size = Vector2(342.8766, 83.53481)
+
+[node name="stove" type="Node2D"]
+script = ExtResource("1_3fsnh")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(574, 264)
+shape = SubResource("RectangleShape2D_v45k4")
+
+[node name="timer" type="AnimatedSprite2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="dish" type="Sprite2D" parent="."]
+position = Vector2(565, 547)
+scale = Vector2(0.47590363, 0.4759036)
+texture = ExtResource("2_eim6s")
+script = ExtResource("2_a3bkh")
+
+[node name="Area2D" type="Area2D" parent="dish"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dish/Area2D"]
+position = Vector2(0.011077881, 1.8338623)
+scale = Vector2(0.9999999, 1)
+shape = SubResource("RectangleShape2D_hbb0h")
+debug_color = Color(0.84389216, 0.21153545, 0.7786088, 0.41960785)

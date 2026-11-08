@@ -1,10 +1,10 @@
 extends AnimatedSprite2D
 @onready var walnuts: Area2D = $Area2D
 
-@onready var m1: Marker2D = $"../mpoz1"
-@onready var m2: Marker2D = $"../mpoz2"
-@onready var m3: Marker2D = $"../mpoz3"
-@onready var m4: Marker2D = $"../mpoz4"
+@onready var m1: Marker2D = $"../../mpoz1"
+@onready var m2: Marker2D = $"../../mpoz2"
+@onready var m3: Marker2D = $"../../mpoz3"
+@onready var m4: Marker2D = $"../../mpoz4"
 var markers: Array[Marker2D] = []
 
 var permis: bool = false
@@ -15,7 +15,7 @@ var asezat: bool = false
 func _ready() -> void:
 	if global.dish_selection == 16:
 		step_needed = 9 #bs, trb schimbat
-	walnuts.area_enteres.connect(bowl_entered)
+	walnuts.area_entered.connect(bowl_entered)
 	walnuts.input_event.connect(mouse)
 	add_to_group("walnuts")
 

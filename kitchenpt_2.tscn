@@ -1,15 +1,39 @@
-[gd_scene format=3 uid="uid://ca2dv6w71kacn"]
+[gd_scene load_steps=5 format=3 uid="uid://ca2dv6w71kacn"]
+
+[ext_resource type="Script" uid="uid://dscs0rcc07ron" path="res://kitchenpt_2.gd" id="1_w5jwy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdbwl"]
+size = Vector2(254.5, 520)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5jwy"]
+size = Vector2(247.5, 201.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwldg"]
+size = Vector2(244.5, 44)
 
 [node name="kitchenpt2" type="Node2D"]
+script = ExtResource("1_w5jwy")
 
 [node name="fridge" type="AnimatedSprite2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="fridge"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fridge/Area2D"]
+position = Vector2(137, 357)
+shape = SubResource("RectangleShape2D_tdbwl")
 
 [node name="oven" type="AnimatedSprite2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="oven"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="oven/Area2D"]
+position = Vector2(458, 522)
+shape = SubResource("RectangleShape2D_w5jwy")
+
+[node name="stove" type="AnimatedSprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="stove"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stove/Area2D"]
+position = Vector2(458.75, 394)
+shape = SubResource("RectangleShape2D_fwldg")

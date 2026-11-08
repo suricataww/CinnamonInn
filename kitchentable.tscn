@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://borq5pqbmmgdp"]
+[gd_scene load_steps=94 format=3 uid="uid://borq5pqbmmgdp"]
 
 [ext_resource type="Script" uid="uid://yuwsgepkshml" path="res://wsugar.gd" id="1_3nmhd"]
 [ext_resource type="Texture2D" uid="uid://drd8lonn2r732" path="res://init_assets/wsugar.png" id="1_owg2j"]
@@ -46,6 +46,15 @@
 [ext_resource type="Script" uid="uid://b1sdgr8tel12a" path="res://bread.gd" id="43_bjok2"]
 [ext_resource type="Script" uid="uid://dg86vxlqhkm3k" path="res://walnuts.gd" id="44_ju1q2"]
 [ext_resource type="Script" uid="uid://bm83f80yyuldr" path="res://applesauce.gd" id="45_nfup2"]
+[ext_resource type="Script" uid="uid://cy7b8l3b2j682" path="res://ginger.gd" id="46_gonjj"]
+[ext_resource type="Script" uid="uid://bqgrdn2sogae5" path="res://carrots.gd" id="47_iuyvy"]
+[ext_resource type="Script" uid="uid://dy3mwmnuepcqi" path="res://raisins.gd" id="48_1pc5d"]
+[ext_resource type="Script" uid="uid://cyqasatyixfvx" path="res://coconut.gd" id="49_8ilor"]
+[ext_resource type="Script" uid="uid://crrwkg473d7xs" path="res://rumessence.gd" id="50_7og87"]
+[ext_resource type="Script" uid="uid://hoppyjnm63r2" path="res://molasses.gd" id="51_dac33"]
+[ext_resource type="Script" uid="uid://coxcwhv268ow0" path="res://rahat.gd" id="52_t54c3"]
+[ext_resource type="Script" uid="uid://bxacwlc4n6qh6" path="res://vinegar.gd" id="53_48483"]
+[ext_resource type="Script" uid="uid://w42pwe5bo3rh" path="res://reddye.gd" id="54_0rbsv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_je1yt"]
 animations = [{
@@ -515,22 +524,67 @@ script = ExtResource("45_nfup2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="applesauce/Area2D"]
 
 [node name="ginger" type="AnimatedSprite2D" parent="."]
+script = ExtResource("46_gonjj")
 
 [node name="Area2D" type="Area2D" parent="ginger"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ginger/Area2D"]
 
 [node name="carrots" type="AnimatedSprite2D" parent="."]
+script = ExtResource("47_iuyvy")
 
 [node name="Area2D" type="Area2D" parent="carrots"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="carrots/Area2D"]
 
 [node name="raisins" type="AnimatedSprite2D" parent="."]
+script = ExtResource("48_1pc5d")
 
 [node name="Area2D" type="Area2D" parent="raisins"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="raisins/Area2D"]
+
+[node name="coconut" type="AnimatedSprite2D" parent="."]
+script = ExtResource("49_8ilor")
+
+[node name="Area2D" type="Area2D" parent="coconut"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coconut/Area2D"]
+
+[node name="rumessence" type="AnimatedSprite2D" parent="."]
+script = ExtResource("50_7og87")
+
+[node name="Area2D" type="Area2D" parent="rumessence"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rumessence/Area2D"]
+
+[node name="molasses" type="AnimatedSprite2D" parent="."]
+script = ExtResource("51_dac33")
+
+[node name="Area2D" type="Area2D" parent="molasses"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="molasses/Area2D"]
+
+[node name="rahat" type="AnimatedSprite2D" parent="."]
+script = ExtResource("52_t54c3")
+
+[node name="Area2D" type="Area2D" parent="rahat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rahat/Area2D"]
+
+[node name="vinegar" type="AnimatedSprite2D" parent="."]
+script = ExtResource("53_48483")
+
+[node name="Area2D" type="Area2D" parent="vinegar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="vinegar/Area2D"]
+
+[node name="reddye" type="AnimatedSprite2D" parent="."]
+script = ExtResource("54_0rbsv")
+
+[node name="Area2D" type="Area2D" parent="reddye"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reddye/Area2D"]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 588.0
